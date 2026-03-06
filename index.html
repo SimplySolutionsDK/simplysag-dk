@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimplySag — Sagsstyring til håndværkere | Fra 199 kr/md</title>
+  <meta name="description" content="Let og billig sagsstyring for håndværkere. Styr sager, timer og materialer direkte fra telefonen. Prøv gratis i 14 dage — ingen binding.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://simplysag.dk">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://simplysag.dk">
+  <meta property="og:title" content="SimplySag — Sagsstyring til håndværkere">
+  <meta property="og:description" content="Fra 199 kr/md. Ingen binding. Prøv gratis i 14 dage.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SimplySag — Sagsstyring til håndværkere">
+  <meta name="twitter:description" content="Fra 199 kr/md. Ingen binding. Prøv gratis i 14 dage.">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SimplySag",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "iOS, Android, Web",
+    "url": "https://simplysag.dk",
+    "description": "Let og billig sag- og tidsstyring for danske håndværkere. Styr sager, timer og materialer direkte fra telefonen.",
+    "offers": {
+      "@type": "Offer",
+      "price": "199",
+      "priceCurrency": "DKK",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "199",
+        "priceCurrency": "DKK",
+        "unitText": "måned"
+      }
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Simply Solutions",
+      "url": "https://simplysolutions.dk",
+      "email": "support@simso.dk"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e40af',
+            'primary-dark': '#1e3a8a',
+            'primary-light': '#3b82f6',
+            accent: '#f97316',
+            'accent-dark': '#ea6c05',
+            bg: '#f8fafc',
+            'text-main': '#1e293b',
+          },
+          fontFamily: {
+            sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* === Base === */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #f8fafc; color: #1e293b; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+    /* === Clipboard Animation === */
+    .clipboard-item { opacity: 0; transform: translateX(-6px); }
+    .clipboard-check { stroke-dasharray: 20; stroke-dashoffset: 20; }
+
+    .clipboard-item-1 { animation: fadeSlide 3s ease-in-out infinite; animation-delay: 0s; }
+    .clipboard-item-2 { animation: fadeSlide 3s ease-in-out infinite; animation-delay: 0.7s; }
+    .clipboard-item-3 { animation: fadeSlide 3s ease-in-out infinite; animation-delay: 1.4s; }
+    .clipboard-check-1 { animation: drawCheck 3s ease-in-out infinite; animation-delay: 0.25s; }
+    .clipboard-check-2 { animation: drawCheck 3s ease-in-out infinite; animation-delay: 0.95s; }
+    .clipboard-check-3 { animation: drawCheck 3s ease-in-out infinite; animation-delay: 1.65s; }
+
+    @keyframes fadeSlide {
+      0%   { opacity: 0; transform: translateX(-6px); }
+      15%  { opacity: 1; transform: translateX(0); }
+      85%  { opacity: 1; transform: translateX(0); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes drawCheck {
+      0%   { stroke-dashoffset: 20; }
+      20%  { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    /* === Clock Hands === */
+    .clock-minute { transform-origin: 60px 60px; animation: rotateMinute 4s linear infinite; }
+    .clock-hour   { transform-origin: 60px 60px; animation: rotateHour 48s linear infinite; }
+    @keyframes rotateMinute { from { transform: rotate(0deg); }   to { transform: rotate(360deg); } }
+    @keyframes rotateHour   { from { transform: rotate(0deg); }   to { transform: rotate(360deg); } }
+
+    /* === Toolbox Bob === */
+    .toolbox-svg { animation: bobPulse 2.5s ease-in-out infinite; }
+    @keyframes bobPulse {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50%       { transform: translateY(-5px) scale(1.03); }
+    }
+
+    /* === Camera Flash === */
+    .camera-flash { animation: flashPulse 2s ease-in-out infinite; }
+    .camera-lens  { animation: lensGlow 2s ease-in-out infinite; }
+    @keyframes flashPulse {
+      0%, 100% { opacity: 0.2; r: 4; }
+      50%      { opacity: 1;   r: 7; }
+    }
+    @keyframes lensGlow {
+      0%, 100% { fill: #1e40af; }
+      50%      { fill: #3b82f6; }
+    }
+
+    /* === Hero parallax feel === */
+    .hero-image-wrap { position: relative; overflow: hidden; border-radius: 1.5rem; }
+    .hero-image-wrap img { transition: transform 0.6s ease; }
+    .hero-image-wrap:hover img { transform: scale(1.03); }
+
+    /* === Gradient text === */
+    .gradient-text {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #f97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* === Glassmorphism cards === */
+    .glass-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.6);
+      box-shadow: 0 4px 24px rgba(30,64,175,0.08), 0 1px 4px rgba(30,64,175,0.06);
+    }
+
+    /* === Nav blur === */
+    .nav-blur {
+      background: rgba(248,250,252,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(30,64,175,0.08);
+    }
+
+    /* === Pricing card highlight === */
+    .pricing-popular {
+      background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+      color: white;
+      box-shadow: 0 20px 48px rgba(30,64,175,0.3);
+      transform: scale(1.05);
+    }
+    .pricing-popular .price-amount { color: #fde68a; }
+    .pricing-popular .price-label { color: rgba(255,255,255,0.8); }
+    .pricing-popular .feature-item { color: rgba(255,255,255,0.9); }
+
+    /* === Steps connector === */
+    .step-connector {
+      background: linear-gradient(90deg, #1e40af, #3b82f6);
+    }
+
+    /* === FAQ accordion === */
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.2s ease;
+    }
+    .faq-content.open {
+      max-height: 200px;
+    }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    /* === CTA hover === */
+    .btn-cta {
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(249,115,22,0.4); }
+    .btn-cta:active { transform: translateY(0); }
+
+    /* === Feature icon ring === */
+    .icon-ring {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      border: 2px solid #bfdbfe;
+    }
+
+    /* === PWA step pill === */
+    .step-pill {
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      color: white;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* === Section divider wave === */
+    .wave-divider svg { display: block; }
+
+    /* === Fade in on scroll (CSS only fallback) === */
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+      .fade-up.visible { opacity: 1; transform: translateY(0); }
+    }
+
+    /* === Mobile nav === */
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; max-height: 0; opacity: 0; overflow: hidden; }
+    #mobile-menu.open { max-height: 300px; opacity: 1; }
+  </style>
+</head>
+<body class="antialiased">
+
+<!-- ============================
+     NAVIGATION
+============================= -->
+<header class="nav-blur sticky top-0 z-50">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2 group" aria-label="SimplySag forside">
+      <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <rect x="3" y="1" width="12" height="15" rx="2" fill="white" fill-opacity="0.9"/>
+          <rect x="6" y="0" width="6" height="3" rx="1.5" fill="#f97316"/>
+          <line x1="5.5" y1="6.5" x2="12.5" y2="6.5" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="5.5" y1="9" x2="12.5" y2="9" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="5.5" y1="11.5" x2="9.5" y2="11.5" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="text-xl font-bold text-primary tracking-tight">Simply<span class="text-accent">Sag</span></span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#funktioner" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Funktioner</a>
+      <a href="#pris" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Pris</a>
+      <a href="#installer" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Installér app</a>
+      <a href="#kontakt" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Kontakt</a>
+      <a href="#pris" class="btn-cta text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-md" aria-label="Prøv SimplySag gratis">
+        Prøv gratis →
+      </a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button id="nav-toggle" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Åbn menu" aria-expanded="false">
+      <svg id="hamburger-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <line x1="2" y1="6" x2="20" y2="6" stroke="#1e293b" stroke-width="2" stroke-linecap="round"/>
+        <line x1="2" y1="11" x2="20" y2="11" stroke="#1e293b" stroke-width="2" stroke-linecap="round"/>
+        <line x1="2" y1="16" x2="20" y2="16" stroke="#1e293b" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden px-4 pb-4 border-t border-slate-100">
+    <div class="flex flex-col gap-1 pt-3">
+      <a href="#funktioner" class="mobile-nav-link px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-blue-50 hover:text-primary transition-colors">Funktioner</a>
+      <a href="#pris" class="mobile-nav-link px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-blue-50 hover:text-primary transition-colors">Pris</a>
+      <a href="#installer" class="mobile-nav-link px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-blue-50 hover:text-primary transition-colors">Installér app</a>
+      <a href="#kontakt" class="mobile-nav-link px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-blue-50 hover:text-primary transition-colors">Kontakt</a>
+      <a href="#pris" class="mt-2 btn-cta text-white text-sm font-semibold px-5 py-3 rounded-xl text-center shadow-md">Prøv gratis →</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================
+     HERO
+============================= -->
+<section class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-orange-50 pt-12 pb-20 md:pt-20 md:pb-28">
+  <!-- Decorative blobs -->
+  <div class="absolute -top-32 -right-32 w-96 h-96 bg-blue-100 rounded-full opacity-50 blur-3xl pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-orange-100 rounded-full opacity-40 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Text -->
+      <div class="fade-up text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 bg-blue-100 text-primary text-xs font-semibold px-4 py-1.5 rounded-full mb-6 border border-blue-200">
+          <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+          Fra 199 kr/md · Ingen binding · Prøv gratis i 14 dage
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6 text-text-main">
+          Sagsstyring<br>
+          <span class="gradient-text">der passer til dig</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-600 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+          Enkel app til sager, timer og materialer.<br>
+          <strong class="text-text-main">Ingen binding. Fra 199 kr/md.</strong>
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="#pris" class="btn-cta inline-flex items-center justify-center gap-2 text-white font-bold text-base px-8 py-4 rounded-2xl shadow-lg" aria-label="Kom i gang med SimplySag">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M10 2L18 10L10 18" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 10H18" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            Kom i gang
+          </a>
+          <a href="#funktioner" class="inline-flex items-center justify-center gap-2 text-primary font-semibold text-base px-8 py-4 rounded-2xl border-2 border-primary hover:bg-blue-50 transition-colors" aria-label="Se funktioner i SimplySag">
+            Se funktioner ↓
+          </a>
+        </div>
+
+        <!-- Social proof -->
+        <div class="mt-10 flex flex-wrap items-center gap-6 justify-center lg:justify-start text-sm text-slate-500">
+          <div class="flex items-center gap-1.5">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#22c55e" aria-hidden="true"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 6.3l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 011.06-1.06L7 8.69l3.47-3.47a.75.75 0 011.06 1.07z"/></svg>
+            Ingen kreditkort krævet
+          </div>
+          <div class="flex items-center gap-1.5">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#22c55e" aria-hidden="true"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 6.3l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 011.06-1.06L7 8.69l3.47-3.47a.75.75 0 011.06 1.07z"/></svg>
+            Opsig når som helst
+          </div>
+          <div class="flex items-center gap-1.5">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#22c55e" aria-hidden="true"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 6.3l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 011.06-1.06L7 8.69l3.47-3.47a.75.75 0 011.06 1.07z"/></svg>
+            Virker på alle enheder
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero visual: Clipboard SVG + photo -->
+      <div class="fade-up flex flex-col items-center gap-6" style="animation-delay:0.15s">
+
+        <!-- Animated Clipboard SVG -->
+        <div class="relative">
+          <svg width="200" height="240" viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Animeret klipbræt med opgaver der krydses af" role="img" class="drop-shadow-xl mx-auto">
+            <!-- Shadow -->
+            <ellipse cx="100" cy="232" rx="64" ry="8" fill="#1e40af" fill-opacity="0.12"/>
+            <!-- Board body -->
+            <rect x="20" y="30" width="160" height="195" rx="12" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+            <!-- Clipboard clip -->
+            <rect x="70" y="22" width="60" height="22" rx="11" fill="#1e40af"/>
+            <rect x="82" y="14" width="36" height="18" rx="9" fill="white" stroke="#1e40af" stroke-width="1.5"/>
+            <!-- Title line -->
+            <rect x="36" y="64" width="80" height="8" rx="4" fill="#1e40af" fill-opacity="0.15"/>
+            <rect x="36" y="64" width="55" height="8" rx="4" fill="#1e40af" fill-opacity="0.5"/>
+
+            <!-- Row 1 checkbox + text -->
+            <g class="clipboard-item clipboard-item-1">
+              <rect x="36" y="92" width="18" height="18" rx="5" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+              <polyline class="clipboard-check clipboard-check-1" points="40,101 44,106 52,95" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="64" y="97" width="88" height="7" rx="3.5" fill="#1e293b" fill-opacity="0.7"/>
+            </g>
+
+            <!-- Row 2 checkbox + text -->
+            <g class="clipboard-item clipboard-item-2">
+              <rect x="36" y="122" width="18" height="18" rx="5" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+              <polyline class="clipboard-check clipboard-check-2" points="40,131 44,136 52,125" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="64" y="127" width="72" height="7" rx="3.5" fill="#1e293b" fill-opacity="0.7"/>
+            </g>
+
+            <!-- Row 3 checkbox + text -->
+            <g class="clipboard-item clipboard-item-3">
+              <rect x="36" y="152" width="18" height="18" rx="5" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+              <polyline class="clipboard-check clipboard-check-3" points="40,161 44,166 52,155" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="64" y="157" width="96" height="7" rx="3.5" fill="#1e293b" fill-opacity="0.7"/>
+            </g>
+
+            <!-- Bottom decorative lines -->
+            <rect x="36" y="188" width="128" height="5" rx="2.5" fill="#f1f5f9"/>
+            <rect x="36" y="198" width="88" height="5" rx="2.5" fill="#f1f5f9"/>
+
+            <!-- Orange badge top-right -->
+            <circle cx="158" cy="56" r="18" fill="#f97316" opacity="0.12"/>
+            <circle cx="158" cy="56" r="12" fill="#f97316"/>
+            <text x="158" y="61" text-anchor="middle" fill="white" font-size="14" font-weight="bold" font-family="system-ui">✓</text>
+          </svg>
+        </div>
+
+        <!-- Real photo -->
+        <div class="hero-image-wrap w-full max-w-md shadow-2xl border border-white/60">
+          <img
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80"
+            alt="Håndværker arbejder på en byggeplads — SimplySag hjælper med sagsstyring"
+            class="w-full h-56 object-cover"
+            loading="eager"
+            width="800"
+            height="224"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent rounded-3xl pointer-events-none"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <div class="glass-card rounded-xl px-4 py-3 flex items-center gap-3">
+              <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M10 2L18 10L10 18" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 10H18" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs font-semibold text-slate-800">Ny sag oprettet</div>
+                <div class="text-xs text-slate-500">Badeværelse renovering · 2 min siden</div>
+              </div>
+              <div class="ml-auto w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FUNKTIONER
+============================= -->
+<section id="funktioner" class="py-20 md:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16 fade-up">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Alt hvad du behøver</h2>
+      <p class="text-lg text-slate-500 max-w-xl mx-auto">SimplySag er bygget til håndværkeren på farten. Enkel, hurtig og altid med i lommen.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Feature 1: Clock / Timer -->
+      <div class="fade-up glass-card rounded-3xl p-8 flex flex-col items-center text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.05s">
+        <div class="icon-ring w-24 h-24 rounded-2xl flex items-center justify-center mb-6">
+          <!-- Animated Clock SVG -->
+          <svg width="64" height="64" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ur med roterende visere" role="img">
+            <!-- Clock face -->
+            <circle cx="60" cy="60" r="48" fill="white" stroke="#dbeafe" stroke-width="3"/>
+            <circle cx="60" cy="60" r="44" fill="#eff6ff"/>
+            <!-- Hour marks -->
+            <line x1="60" y1="20" x2="60" y2="28" stroke="#1e40af" stroke-width="3" stroke-linecap="round"/>
+            <line x1="60" y1="92" x2="60" y2="100" stroke="#1e40af" stroke-width="3" stroke-linecap="round"/>
+            <line x1="20" y1="60" x2="28" y2="60" stroke="#1e40af" stroke-width="3" stroke-linecap="round"/>
+            <line x1="92" y1="60" x2="100" y2="60" stroke="#1e40af" stroke-width="3" stroke-linecap="round"/>
+            <!-- Minor marks -->
+            <line x1="84" y1="26.3" x2="80.5" y2="32.4" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+            <line x1="93.7" y1="36" x2="87.6" y2="39.5" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+            <line x1="93.7" y1="84" x2="87.6" y2="80.5" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+            <line x1="84" y1="93.7" x2="80.5" y2="87.6" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+            <line x1="36" y1="93.7" x2="39.5" y2="87.6" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+            <line x1="26.3" y1="84" x2="32.4" y2="80.5" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+            <line x1="26.3" y1="36" x2="32.4" y2="39.5" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+            <line x1="36" y1="26.3" x2="39.5" y2="32.4" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+            <!-- Minute hand (long) -->
+            <line class="clock-minute" x1="60" y1="60" x2="60" y2="22" stroke="#1e40af" stroke-width="3" stroke-linecap="round"/>
+            <!-- Hour hand (short) -->
+            <line class="clock-hour" x1="60" y1="60" x2="60" y2="36" stroke="#f97316" stroke-width="4" stroke-linecap="round"/>
+            <!-- Center dot -->
+            <circle cx="60" cy="60" r="5" fill="#1e40af"/>
+            <circle cx="60" cy="60" r="2" fill="white"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-text-main mb-3">Timeseddel</h3>
+        <p class="text-slate-500 leading-relaxed text-sm">Registrér timer direkte fra telefonen. Se hvem der har arbejdet hvad, og eksportér nemt til faktura.</p>
+        <div class="mt-6 pt-6 border-t border-slate-100 w-full">
+          <ul class="space-y-2 text-left text-sm text-slate-600">
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Start/stop timer med ét tryk</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Oversigt pr. sag og medarbejder</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Eksport til CSV og PDF</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feature 2: Briefcase / Sagsstyring -->
+      <div class="fade-up glass-card rounded-3xl p-8 flex flex-col items-center text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 border-primary/20" style="animation-delay:0.1s">
+        <div class="w-6 h-6 bg-accent text-white text-xs font-bold rounded-full flex items-center justify-center mb-2 -mt-2">★</div>
+        <div class="icon-ring w-24 h-24 rounded-2xl flex items-center justify-center mb-6">
+          <!-- Animated Toolbox SVG -->
+          <svg class="toolbox-svg" width="64" height="64" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Kuffert til sagsstyring" role="img">
+            <!-- Handle -->
+            <path d="M44 44 C44 36 76 36 76 44" stroke="#1e40af" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <!-- Body -->
+            <rect x="18" y="44" width="84" height="56" rx="10" fill="white" stroke="#1e40af" stroke-width="3"/>
+            <rect x="18" y="44" width="84" height="56" rx="10" fill="url(#briefcase-grad)"/>
+            <!-- Middle stripe -->
+            <rect x="18" y="66" width="84" height="12" fill="#1e40af" fill-opacity="0.12"/>
+            <!-- Clasp -->
+            <rect x="50" y="62" width="20" height="16" rx="4" fill="#1e40af"/>
+            <rect x="55" y="66" width="10" height="8" rx="2" fill="white"/>
+            <!-- Decorative lines -->
+            <line x1="30" y1="80" x2="44" y2="80" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            <line x1="30" y1="87" x2="40" y2="87" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+            <line x1="76" y1="80" x2="90" y2="80" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            <line x1="80" y1="87" x2="90" y2="87" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+            <defs>
+              <linearGradient id="briefcase-grad" x1="18" y1="44" x2="102" y2="100" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#eff6ff" stop-opacity="0.9"/>
+                <stop offset="1" stop-color="#dbeafe" stop-opacity="0.7"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-text-main mb-3">Sagsstyring</h3>
+        <p class="text-slate-500 leading-relaxed text-sm">Hold styr på alle sager ét sted. Fra oprettelse til afslutning — med tilknyttede timer, materialer og billeder.</p>
+        <div class="mt-6 pt-6 border-t border-slate-100 w-full">
+          <ul class="space-y-2 text-left text-sm text-slate-600">
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Opret sager på sekunder</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Tilknyt medarbejdere og materialer</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Status og overblik i realtid</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feature 3: Camera -->
+      <div class="fade-up glass-card rounded-3xl p-8 flex flex-col items-center text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.15s">
+        <div class="icon-ring w-24 h-24 rounded-2xl flex items-center justify-center mb-6">
+          <!-- Animated Camera SVG -->
+          <svg width="64" height="64" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Kamera til billedokumentation" role="img">
+            <!-- Flash burst rays (animated) -->
+            <circle class="camera-flash" cx="92" cy="34" r="4" fill="#fbbf24"/>
+            <line x1="92" y1="22" x2="92" y2="26" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round" opacity="0.6" style="animation: flashPulse 2s ease-in-out infinite 0.1s"/>
+            <line x1="101" y1="25" x2="98.5" y2="27.5" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round" opacity="0.6" style="animation: flashPulse 2s ease-in-out infinite 0.2s"/>
+            <line x1="104" y1="34" x2="100" y2="34" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round" opacity="0.6" style="animation: flashPulse 2s ease-in-out infinite 0.3s"/>
+            <!-- Camera body -->
+            <rect x="14" y="42" width="84" height="58" rx="12" fill="white" stroke="#1e40af" stroke-width="3"/>
+            <rect x="14" y="42" width="84" height="58" rx="12" fill="url(#cam-grad)"/>
+            <!-- Top bump (viewfinder) -->
+            <path d="M38 42 L38 34 Q38 30 42 30 L54 30 Q58 30 58 34 L58 42" fill="#1e40af" fill-opacity="0.15" stroke="#1e40af" stroke-width="2.5"/>
+            <!-- Lens outer ring -->
+            <circle cx="56" cy="71" r="22" fill="white" stroke="#dbeafe" stroke-width="3"/>
+            <circle cx="56" cy="71" r="18" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+            <!-- Lens inner -->
+            <circle class="camera-lens" cx="56" cy="71" r="12" fill="#1e40af"/>
+            <circle cx="56" cy="71" r="7" fill="#0f2469" opacity="0.9"/>
+            <!-- Lens shine -->
+            <circle cx="51" cy="66" r="3" fill="white" opacity="0.4"/>
+            <!-- Shutter button -->
+            <circle cx="88" cy="54" r="7" fill="#f97316" opacity="0.9"/>
+            <circle cx="88" cy="54" r="4" fill="#ea580c"/>
+            <defs>
+              <linearGradient id="cam-grad" x1="14" y1="42" x2="98" y2="100" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f8fafc" stop-opacity="0.8"/>
+                <stop offset="1" stop-color="#eff6ff" stop-opacity="0.6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-text-main mb-3">Billeddokumentation</h3>
+        <p class="text-slate-500 leading-relaxed text-sm">Tag billeder direkte i appen og tilknyt dem til sagen. Perfekt til dokumentation før, under og efter.</p>
+        <div class="mt-6 pt-6 border-t border-slate-100 w-full">
+          <ul class="space-y-2 text-left text-sm text-slate-600">
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Tag billeder i appen</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Automatisk tilknyttet til sagen</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Del med kunder direkte</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     PHOTO BREAK (tools)
+============================= -->
+<section class="relative h-64 md:h-80 overflow-hidden" aria-hidden="false">
+  <img
+    src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1400&q=80"
+    alt="Håndværktøj på en arbejdsbænk — SimplySag organiserer dit arbejde"
+    class="w-full h-full object-cover"
+    loading="lazy"
+    width="1400"
+    height="320"
+  >
+  <div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent flex items-center">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <blockquote class="text-white max-w-md">
+        <p class="text-2xl sm:text-3xl font-bold leading-snug mb-3">"Endelig et system, der er bygget til os på gulvet."</p>
+        <footer class="text-blue-200 text-sm">— Bygget til danske håndværkere</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     SÅDAN VIRKER DET
+============================= -->
+<section class="py-20 md:py-28 bg-gradient-to-b from-white to-slate-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16 fade-up">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Sådan virker det</h2>
+      <p class="text-lg text-slate-500">Kom i gang på under et minut — ingen IT-afdeling nødvendig.</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="relative">
+      <!-- Connector line (desktop) -->
+      <div class="hidden md:block absolute top-12 left-0 right-0 h-0.5 step-connector mx-24 rounded-full opacity-30" aria-hidden="true"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Step 1 -->
+        <div class="fade-up flex flex-col items-center text-center relative" style="animation-delay:0.05s">
+          <div class="relative mb-6">
+            <div class="w-24 h-24 bg-white rounded-2xl shadow-lg border border-blue-100 flex items-center justify-center">
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+                <rect x="6" y="8" width="32" height="28" rx="5" fill="#eff6ff" stroke="#1e40af" stroke-width="2"/>
+                <line x1="14" y1="16" x2="30" y2="16" stroke="#1e40af" stroke-width="2" stroke-linecap="round"/>
+                <line x1="14" y1="22" x2="26" y2="22" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                <line x1="14" y1="28" x2="22" y2="28" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="36" cy="34" r="8" fill="#f97316"/>
+                <text x="36" y="38" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="system-ui">1</text>
+              </svg>
+            </div>
+          </div>
+          <div class="bg-primary text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center mb-3 shadow-md">1</div>
+          <h3 class="text-lg font-bold text-text-main mb-2">Opret din virksomhed</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">På 30 sekunder er du klar. Udfyld navn og CVR — resten klarer vi.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="fade-up flex flex-col items-center text-center relative" style="animation-delay:0.1s">
+          <div class="relative mb-6">
+            <div class="w-24 h-24 bg-white rounded-2xl shadow-lg border border-blue-100 flex items-center justify-center">
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+                <circle cx="22" cy="14" r="7" fill="#eff6ff" stroke="#1e40af" stroke-width="2"/>
+                <path d="M8 36 C8 28 36 28 36 36" stroke="#1e40af" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <circle cx="34" cy="28" r="6" fill="#f97316"/>
+                <line x1="34" y1="25" x2="34" y2="31" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <line x1="31" y1="28" x2="37" y2="28" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="bg-primary text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center mb-3 shadow-md">2</div>
+          <h3 class="text-lg font-bold text-text-main mb-2">Invitér dine medarbejdere</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Del en simpel kode med dit team. De er klar på 60 sekunder.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="fade-up flex flex-col items-center text-center relative" style="animation-delay:0.15s">
+          <div class="relative mb-6">
+            <div class="w-24 h-24 bg-white rounded-2xl shadow-lg border border-blue-100 flex items-center justify-center">
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+                <rect x="12" y="4" width="20" height="36" rx="4" fill="#eff6ff" stroke="#1e40af" stroke-width="2"/>
+                <rect x="16" y="8" width="12" height="20" rx="2" fill="#dbeafe"/>
+                <circle cx="22" cy="34" r="2.5" fill="#1e40af"/>
+                <rect x="14" y="2" width="16" height="3" rx="1.5" fill="#1e40af"/>
+                <path d="M17 14 L19 17 L25 11" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="bg-primary text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center mb-3 shadow-md">3</div>
+          <h3 class="text-lg font-bold text-text-main mb-2">Styr sagerne fra telefonen</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Opret sager, registrér timer og tag billeder — alt fra din smartphone.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     PRIS
+============================= -->
+<section id="pris" class="py-20 md:py-28 bg-gradient-to-br from-primary via-blue-700 to-blue-900 relative overflow-hidden">
+  <!-- Decorative -->
+  <div class="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-4 fade-up">
+      <span class="inline-block bg-white/10 text-white text-xs font-semibold px-4 py-1.5 rounded-full border border-white/20 mb-4">Gennemsigtig prissætning</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Simpel og ærlig pris</h2>
+      <p class="text-lg text-blue-200 max-w-lg mx-auto">199 kr/md for de første 3 brugere. Derefter 49 kr/md per ekstra bruger.</p>
+    </div>
+
+    <!-- Price formula -->
+    <div class="flex justify-center mb-12 fade-up">
+      <div class="bg-white/10 border border-white/20 rounded-2xl px-8 py-4 text-center">
+        <span class="text-white font-mono text-lg font-bold">199 kr</span>
+        <span class="text-blue-200 mx-3">+</span>
+        <span class="text-white font-mono text-lg font-bold">49 kr × (antal brugere − 3)</span>
+        <span class="text-blue-200 text-sm block mt-1">pr. måned · de første 3 brugere er inkluderet</span>
+      </div>
+    </div>
+
+    <!-- Price cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center mb-12">
+
+      <!-- 1 user -->
+      <div class="fade-up bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-8 text-center" style="animation-delay:0.05s">
+        <div class="text-blue-200 text-sm font-semibold mb-4 uppercase tracking-wider">1 bruger</div>
+        <div class="text-5xl font-extrabold text-white mb-1">199</div>
+        <div class="text-blue-200 text-sm mb-6">kr/md</div>
+        <div class="space-y-3 text-sm text-blue-100">
+          <div class="flex items-center gap-2 justify-center"><span class="text-green-400">✓</span> Ubegrænset sager</div>
+          <div class="flex items-center gap-2 justify-center"><span class="text-green-400">✓</span> Timeregistrering</div>
+          <div class="flex items-center gap-2 justify-center"><span class="text-green-400">✓</span> Billeddokumentation</div>
+        </div>
+      </div>
+
+      <!-- 5 users (popular) -->
+      <div class="fade-up pricing-popular rounded-3xl p-8 text-center relative" style="animation-delay:0.1s">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+          ★ Mest populær
+        </div>
+        <div class="text-yellow-200 text-sm font-semibold mb-4 uppercase tracking-wider">5 brugere</div>
+        <div class="price-amount text-5xl font-extrabold mb-1">297</div>
+        <div class="price-label text-sm mb-2">kr/md</div>
+        <div class="text-yellow-100 text-xs mb-6 font-mono">199 + 2 × 49 kr</div>
+        <div class="space-y-3 text-sm feature-item">
+          <div class="flex items-center gap-2 justify-center"><span class="text-green-400">✓</span> Alt i base-pakken</div>
+          <div class="flex items-center gap-2 justify-center"><span class="text-green-400">✓</span> Teamoverblik</div>
+          <div class="flex items-center gap-2 justify-center"><span class="text-green-400">✓</span> Prioriteret support</div>
+        </div>
+        <a href="https://simplysag.dk/opret" class="btn-cta mt-8 inline-block w-full text-white font-bold py-3.5 rounded-xl text-base shadow-lg" aria-label="Opret konto og prøv gratis">
+          Start gratis →
+        </a>
+      </div>
+
+      <!-- 8 users -->
+      <div class="fade-up bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-8 text-center" style="animation-delay:0.15s">
+        <div class="text-blue-200 text-sm font-semibold mb-4 uppercase tracking-wider">8 brugere</div>
+        <div class="text-5xl font-extrabold text-white mb-1">444</div>
+        <div class="text-blue-200 text-sm mb-2">kr/md</div>
+        <div class="text-blue-300 text-xs mb-6 font-mono">199 + 5 × 49 kr</div>
+        <div class="space-y-3 text-sm text-blue-100">
+          <div class="flex items-center gap-2 justify-center"><span class="text-green-400">✓</span> Alt i base-pakken</div>
+          <div class="flex items-center gap-2 justify-center"><span class="text-green-400">✓</span> Fuld teamadministration</div>
+          <div class="flex items-center gap-2 justify-center"><span class="text-green-400">✓</span> Prioriteret support</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tagline + CTA -->
+    <div class="text-center fade-up">
+      <p class="text-blue-200 text-base mb-8">
+        <span class="text-white font-semibold">Ingen binding</span> · 
+        <span class="text-white font-semibold">Ingen opsætningsgebyr</span> · 
+        <span class="text-white font-semibold">Ingen overraskelser</span>
+      </p>
+      <a href="https://simplysag.dk/opret" class="btn-cta inline-flex items-center gap-3 text-white font-extrabold text-lg px-10 py-5 rounded-2xl shadow-xl" aria-label="Start gratis i 14 dage">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="10" stroke="white" stroke-width="2"/>
+          <path d="M8 11h6M11 8l3 3-3 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Start gratis i 14 dage →
+      </a>
+      <p class="mt-4 text-blue-300 text-sm">Ingen kreditkort. Opsig med 1 måneds varsel.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     INSTALLER APP (PWA)
+============================= -->
+<section id="installer" class="py-20 md:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16 fade-up">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">
+        Installér app'en på din telefon
+      </h2>
+      <p class="text-lg text-slate-500 max-w-xl mx-auto">
+        SimplySag fungerer som en rigtig app — direkte fra din browser. Ingen App Store. Ingen Google Play.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+
+      <!-- iOS card -->
+      <div class="fade-up glass-card rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 border-blue-100" style="animation-delay:0.05s">
+        <!-- Phone icon -->
+        <div class="w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <rect x="4" y="1" width="20" height="26" rx="4" fill="white" fill-opacity="0.15" stroke="white" stroke-width="1.5"/>
+            <rect x="7" y="4" width="14" height="18" rx="2" fill="white" fill-opacity="0.3"/>
+            <circle cx="14" cy="25" r="1.5" fill="white" fill-opacity="0.7"/>
+            <!-- Apple-like logo hint -->
+            <path d="M11 9.5 C11 8.1 12 7 14 7 C14 8.5 13.2 9.2 12 9.5 Z" fill="white" opacity="0.8"/>
+            <path d="M10.5 10.5 C9.5 11.5 9 13 9.5 14.5 C10 16 11 17 12 17.5 C12.5 17 13 17 14 17 C15 17 15.5 17 16 17.5 C17 17 18 16 18.5 14.5 C19 13 18.5 11.5 17.5 10.5 C16.5 9.8 15 9.5 14 9.5 C13 9.5 11.5 9.8 10.5 10.5 Z" fill="white" opacity="0.8"/>
+          </svg>
+        </div>
+
+        <div class="flex items-center gap-2 mb-6">
+          <span class="text-lg font-bold text-text-main">iPhone / iPad</span>
+          <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-medium">iOS</span>
+        </div>
+
+        <ol class="space-y-4">
+          <li class="flex items-start gap-3">
+            <span class="step-pill mt-0.5">1</span>
+            <div>
+              <span class="font-semibold text-text-main text-sm">Åbn Safari</span>
+              <p class="text-slate-500 text-xs mt-0.5">Gå til <strong class="text-primary">simplysag.dk</strong> i Safari (ikke Chrome)</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="step-pill mt-0.5">2</span>
+            <div>
+              <span class="font-semibold text-text-main text-sm">Tryk på Del-ikonet</span>
+              <p class="text-slate-500 text-xs mt-0.5">Find firkanten med pil opad (
+                <svg class="inline" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-label="Del-ikon">
+                  <rect x="3" y="4" width="6" height="7" rx="1" stroke="#1e40af" stroke-width="1.2"/>
+                  <path d="M6 1v6M4 3l2-2 2 2" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              ) i Safari-menuen</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="step-pill mt-0.5">3</span>
+            <div>
+              <span class="font-semibold text-text-main text-sm">Vælg "Føj til hjemmeskærm"</span>
+              <p class="text-slate-500 text-xs mt-0.5">Rul ned i delelisten og tryk på ikonet</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="step-pill mt-0.5">4</span>
+            <div>
+              <span class="font-semibold text-text-main text-sm">Tryk "Tilføj"</span>
+              <p class="text-slate-500 text-xs mt-0.5">SimplySag dukker nu op som en app på din hjemmeskærm</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Android card -->
+      <div class="fade-up glass-card rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 border-green-100" style="animation-delay:0.1s">
+        <!-- Android phone icon -->
+        <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <rect x="5" y="5" width="18" height="22" rx="3" fill="white" fill-opacity="0.2" stroke="white" stroke-width="1.5"/>
+            <rect x="8" y="8" width="12" height="14" rx="1.5" fill="white" fill-opacity="0.35"/>
+            <circle cx="14" cy="25" r="1.2" fill="white" fill-opacity="0.7"/>
+            <!-- Android-ish antenna bumps -->
+            <line x1="10" y1="4" x2="8" y2="2" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <line x1="18" y1="4" x2="20" y2="2" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+          </svg>
+        </div>
+
+        <div class="flex items-center gap-2 mb-6">
+          <span class="text-lg font-bold text-text-main">Android-telefon</span>
+          <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full font-medium border border-green-200">Android</span>
+        </div>
+
+        <ol class="space-y-4">
+          <li class="flex items-start gap-3">
+            <span class="step-pill mt-0.5" style="background: linear-gradient(135deg, #16a34a, #22c55e);">1</span>
+            <div>
+              <span class="font-semibold text-text-main text-sm">Åbn Chrome</span>
+              <p class="text-slate-500 text-xs mt-0.5">Gå til <strong class="text-primary">simplysag.dk</strong> i Chrome</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="step-pill mt-0.5" style="background: linear-gradient(135deg, #16a34a, #22c55e);">2</span>
+            <div>
+              <span class="font-semibold text-text-main text-sm">Tryk på menu-ikonet ⋮</span>
+              <p class="text-slate-500 text-xs mt-0.5">Find de tre prikker øverst til højre i Chrome</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="step-pill mt-0.5" style="background: linear-gradient(135deg, #16a34a, #22c55e);">3</span>
+            <div>
+              <span class="font-semibold text-text-main text-sm">Vælg "Føj til startskærm"</span>
+              <p class="text-slate-500 text-xs mt-0.5">Eller se efter "Installér app" i menuen</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="step-pill mt-0.5" style="background: linear-gradient(135deg, #16a34a, #22c55e);">4</span>
+            <div>
+              <span class="font-semibold text-text-main text-sm">Tryk "Tilføj"</span>
+              <p class="text-slate-500 text-xs mt-0.5">App-ikonet vises nu på din startskærm</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+    </div>
+
+    <!-- Bottom note -->
+    <div class="mt-10 text-center fade-up">
+      <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 rounded-2xl px-6 py-3 text-sm text-slate-600">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <circle cx="9" cy="9" r="8" stroke="#1e40af" stroke-width="1.5"/>
+          <line x1="9" y1="8" x2="9" y2="13" stroke="#1e40af" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="9" cy="5.5" r="1" fill="#1e40af"/>
+        </svg>
+        App'en virker på alle enheder: iPhone, Android, iPad og computer — ingen installation fra App Store nødvendig.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FAQ
+============================= -->
+<section class="py-20 md:py-28 bg-slate-50">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16 fade-up">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Ofte stillede spørgsmål</h2>
+      <p class="text-slate-500">Har du andre spørgsmål? Skriv til <a href="mailto:support@simso.dk" class="text-primary font-semibold hover:underline">support@simso.dk</a></p>
+    </div>
+
+    <div class="space-y-4" id="faq-container">
+
+      <!-- FAQ 1 -->
+      <div class="faq-item fade-up glass-card rounded-2xl overflow-hidden" data-index="0" style="animation-delay:0.05s">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-blue-50/50 transition-colors" aria-expanded="false">
+          <span class="font-semibold text-text-main pr-4">Hvad koster det for et 5-mands firma?</span>
+          <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-content px-6">
+          <p class="text-slate-600 text-sm leading-relaxed pb-6">
+            For et 5-mands firma betaler du: <strong class="text-text-main">199 kr + 2 × 49 kr = 297 kr/md</strong>. 
+            De første 3 brugere er inkluderet i basispakken. Herefter tilkommer 49 kr/md per ekstra bruger.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item fade-up glass-card rounded-2xl overflow-hidden" data-index="1" style="animation-delay:0.08s">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-blue-50/50 transition-colors" aria-expanded="false">
+          <span class="font-semibold text-text-main pr-4">Er der binding?</span>
+          <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-content px-6">
+          <p class="text-slate-600 text-sm leading-relaxed pb-6">
+            Nej, der er ingen binding. Du kan opsige dit abonnement med <strong class="text-text-main">1 måneds varsel</strong>. 
+            Ingen opsætningsgebyr, ingen bindingsperiode, ingen overraskelser.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item fade-up glass-card rounded-2xl overflow-hidden" data-index="2" style="animation-delay:0.11s">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-blue-50/50 transition-colors" aria-expanded="false">
+          <span class="font-semibold text-text-main pr-4">Virker det på mobilen?</span>
+          <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-content px-6">
+          <p class="text-slate-600 text-sm leading-relaxed pb-6">
+            Ja! SimplySag er bygget <strong class="text-text-main">mobile-first</strong> og fungerer som en app på alle enheder. 
+            Det virker på iOS (iPhone og iPad) og Android via din browser — uden installation fra App Store eller Google Play. 
+            Se afsnittet "Installér app'en" ovenfor for en guide.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item fade-up glass-card rounded-2xl overflow-hidden" data-index="3" style="animation-delay:0.14s">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-blue-50/50 transition-colors" aria-expanded="false">
+          <span class="font-semibold text-text-main pr-4">Hvad hvis jeg har specielle behov?</span>
+          <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-content px-6">
+          <p class="text-slate-600 text-sm leading-relaxed pb-6">
+            Kontakt os på <a href="mailto:support@simso.dk" class="text-primary font-semibold hover:underline">support@simso.dk</a> — 
+            vi tilbyder <strong class="text-text-main">tilpassede løsninger</strong> til virksomheder med særlige behov. 
+            Vi er et dansk software-firma og besvarer alle henvendelser inden for 1 arbejdsdag.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FINAL CTA
+============================= -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50 border-t border-orange-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="fade-up">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Klar til at komme i gang?</h2>
+      <p class="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
+        Prøv SimplySag gratis i 14 dage. Ingen kreditkort. Ingen binding. Ingen overraskelser.
+      </p>
+      <a href="https://simplysag.dk/opret" class="btn-cta inline-flex items-center gap-3 text-white font-extrabold text-xl px-12 py-5 rounded-2xl shadow-xl" aria-label="Start din gratis periode i SimplySag">
+        Start gratis i dag →
+      </a>
+      <p class="mt-6 text-slate-500 text-sm">
+        Spørgsmål? Skriv til <a href="mailto:support@simso.dk" class="text-primary font-semibold hover:underline">support@simso.dk</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FOOTER
+============================= -->
+<footer id="kontakt" class="bg-slate-900 text-slate-400 py-14">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+
+      <!-- Brand -->
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <rect x="3" y="1" width="12" height="15" rx="2" fill="white" fill-opacity="0.9"/>
+              <rect x="6" y="0" width="6" height="3" rx="1.5" fill="#f97316"/>
+              <line x1="5.5" y1="6.5" x2="12.5" y2="6.5" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="5.5" y1="9" x2="12.5" y2="9" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="5.5" y1="11.5" x2="9.5" y2="11.5" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="text-white text-xl font-bold">Simply<span class="text-accent">Sag</span></span>
+        </div>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-xs">
+          Let og billig sagsstyring for danske håndværkere. Oprettet af Simply Solutions.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Produkt</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#funktioner" class="hover:text-white transition-colors">Funktioner</a></li>
+          <li><a href="#pris" class="hover:text-white transition-colors">Priser</a></li>
+          <li><a href="#installer" class="hover:text-white transition-colors">Installér app</a></li>
+          <li><a href="https://simplysag.dk/opret" class="hover:text-white transition-colors">Opret konto</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Kontakt</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="mailto:support@simso.dk" class="hover:text-white transition-colors flex items-center gap-2" aria-label="Send e-mail til support">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1" y="3" width="12" height="8" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M1 5l6 4 6-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              support@simso.dk
+            </a>
+          </li>
+          <li>
+            <a href="https://simplysolutions.dk" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-2" aria-label="Besøg Simply Solutions (åbner i nyt vindue)">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M4 7h6M7 1c-2 2-2 8 0 12M7 1c2 2 2 8 0 12M1 7h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              simplysolutions.dk
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
+      <p>© 2026 SimplySag · En del af <a href="https://simplysolutions.dk" class="hover:text-slate-400 transition-colors" target="_blank" rel="noopener noreferrer">Simply Solutions</a></p>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hover:text-slate-400 transition-colors">Privatlivspolitik</a>
+        <a href="#" class="hover:text-slate-400 transition-colors">Vilkår for brug</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================
+     JAVASCRIPT
+============================= -->
+<script>
+  // === Mobile nav toggle ===
+  const navToggle = document.getElementById('nav-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen.toString());
+  });
+
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // === FAQ accordion ===
+  document.querySelectorAll('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const item = trigger.closest('.faq-item');
+      const content = item.querySelector('.faq-content');
+      const isOpen = item.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-content').classList.remove('open');
+        i.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+      });
+
+      // Open this one if it was closed
+      if (!isOpen) {
+        item.classList.add('open');
+        content.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // === Scroll fade-in ===
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  } else {
+    // Fallback: show all immediately
+    document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+  }
+</script>
+
+</body>
+</html>
