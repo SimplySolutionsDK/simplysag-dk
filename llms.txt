@@ -1,0 +1,42 @@
+# SimplySag
+
+> SimplySag er en enkel og billig sagsstyringsapp til danske håndværkere. Styr sager, timer og materialer direkte fra telefonen — ingen App Store-installation nødvendig.
+
+## Produkt
+- **Navn**: SimplySag
+- **Kategori**: Sagsstyring SaaS til danske håndværkere
+- **Pris**: 199 DKK/måned (inkl. 3 brugere), +49 DKK/md pr. ekstra bruger
+- **Prøveperiode**: 30 dage gratis (kreditkort kræves)
+- **Binding**: Ingen binding, opsig når som helst
+- **URL**: https://simplysag.dk
+- **App**: https://simplysag-app.web.app
+
+## Kernefunktioner
+- Sagsstyring med status (Ny, I gang, Afsluttet, Afregnet)
+- Tidsregistrering direkte fra mobilen
+- Materialregistrering med foto-dokumentation
+- Kundedatabase (CRM light)
+- Brugerroller: Ejer, Kontor, Markarbejder
+- Fungerer på iPhone, Android, tablet og computer uden installation
+
+## Målgruppe
+Små danske håndværkervirksomheder 2-10 ansatte: murere, malere, tømrere, VVS-installatører, elektrikere, anlægsgartnere.
+
+## Priser
+- Basis: 199 DKK/md — inkluderer 3 brugere
+- Ekstra bruger: +49 DKK/md pr. bruger
+- Prøveperiode: 30 dage gratis med kreditkort
+- Ingen opstartsgebyr, ingen binding
+
+## Konkurrenter og sammenligning
+SimplySag konkurrerer med Minuba, Apacha og Orderstyring. SimplySag er billigere end alle tre og fokuserer på enkelhed frem for funktioner.
+
+## Leverandør
+- **Firma**: Simply Solutions
+- **CVR**: 41741015
+- **Email**: jacob@simso.dk
+- **Website**: https://simplysolutions.dk
+- **Land**: Danmark (Fyn)
+
+## Kontakt og support
+support@simso.dk

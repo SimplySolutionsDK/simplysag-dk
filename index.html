@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SimplySag — Sagsstyring til håndværkere | Fra 199 kr/md</title>
-  <meta name="description" content="Let og billig sagsstyring for håndværkere. Styr sager, timer og materialer direkte fra telefonen. Prøv gratis i 30 dage — ingen binding.">
+  <title>SimplySag — Sagsstyring til håndværkere | Tidsregistrering App fra 199 kr/md</title>
+  <meta name="description" content="Styr sager, timer og materialer fra telefonen. Enkel sagsstyring app til danske håndværkere — murere, tømrere, malere og VVS. Fra 199 kr/md. Prøv 30 dage gratis.">
+  <meta name="keywords" content="sagsstyring håndværker, tidsregistrering app håndværker, håndværker sags app, digital sagsstyring, byggesag app, timeseddel app">
   <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="DK">
+  <meta name="language" content="da">
+  <meta name="author" content="Simply Solutions">
   <link rel="canonical" href="https://simplysag.dk">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://simplysag.dk">
-  <meta property="og:title" content="SimplySag — Sagsstyring til håndværkere">
-  <meta property="og:description" content="Fra 199 kr/md. Ingen binding. Prøv gratis i 30 dage.">
+  <meta property="og:title" content="SimplySag — Sagsstyring til håndværkere | Tidsregistrering App fra 199 kr/md">
+  <meta property="og:description" content="Styr sager, timer og materialer fra telefonen. Enkel sagsstyring app til danske håndværkere — murere, tømrere, malere og VVS. Fra 199 kr/md. Prøv 30 dage gratis.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80">
 
   <!-- Twitter Card -->
@@ -24,29 +28,226 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "SimplySag",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "iOS, Android, Web",
-    "url": "https://simplysag.dk",
-    "description": "Let og billig sag- og tidsstyring for danske håndværkere. Styr sager, timer og materialer direkte fra telefonen.",
-    "offers": {
-      "@type": "Offer",
-      "price": "199",
-      "priceCurrency": "DKK",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "199",
-        "priceCurrency": "DKK",
-        "unitText": "måned"
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://simplysag.dk/#software",
+        "name": "SimplySag",
+        "alternateName": "Simply Sag",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "ProjectManagementApplication",
+        "operatingSystem": "iOS, Android, Web",
+        "url": "https://simplysag.dk",
+        "sameAs": "https://simplysag-app.web.app",
+        "description": "SimplySag er en enkel og billig sagsstyringsapp til danske håndværkere. Styr sager, timer og materialer direkte fra telefonen — ingen App Store-installation nødvendig.",
+        "inLanguage": "da",
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Håndværkere",
+          "geographicArea": {
+            "@type": "Country",
+            "name": "Denmark"
+          }
+        },
+        "featureList": [
+          "Sagsstyring med status (Ny, I gang, Afsluttet, Afregnet)",
+          "Tidsregistrering direkte fra mobilen",
+          "Materialregistrering med foto-dokumentation",
+          "Kundedatabase",
+          "Brugerroller: Ejer, Kontor, Markarbejder",
+          "PWA — virker på iPhone, Android, tablet og computer"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "@id": "https://simplysag.dk/#offer",
+          "price": "199",
+          "priceCurrency": "DKK",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "199",
+            "priceCurrency": "DKK",
+            "billingIncrement": 1,
+            "unitText": "måned",
+            "referenceQuantity": {
+              "@type": "QuantitativeValue",
+              "value": 1,
+              "unitText": "måned"
+            }
+          },
+          "description": "199 DKK/md inkl. 3 brugere. +49 DKK/md pr. ekstra bruger. 30 dages gratis prøveperiode.",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@id": "https://simplysolutions.dk/#organization"
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail"
+          },
+          "trialStatus": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "DK"
+            }
+          }
+        },
+        "provider": {
+          "@id": "https://simplysolutions.dk/#organization"
+        },
+        "releaseNotes": "Prøveperiode: 30 dage gratis (kreditkort kræves). Ingen binding — opsig når som helst."
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://simplysolutions.dk/#organization",
+        "name": "Simply Solutions",
+        "legalName": "Simply Solutions",
+        "url": "https://simplysolutions.dk",
+        "email": "jacob@simso.dk",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "support@simso.dk",
+          "contactType": "customer support",
+          "availableLanguage": "Danish"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK",
+          "addressRegion": "Fyn"
+        },
+        "identifier": {
+          "@type": "PropertyValue",
+          "name": "CVR",
+          "value": "41741015"
+        },
+        "foundingDate": "2020",
+        "sameAs": [
+          "https://simplysolutions.dk"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://simplysag.dk/#website",
+        "url": "https://simplysag.dk",
+        "name": "SimplySag",
+        "description": "Sagsstyring app til danske håndværkere",
+        "inLanguage": "da",
+        "publisher": {
+          "@id": "https://simplysolutions.dk/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://simplysag.dk/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://simplysag.dk/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Hvad koster det for et 5-mands firma?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For et 5-mands firma betaler du: 199 kr + 2 × 49 kr = 297 kr/md. De første 3 brugere er inkluderet i basispakken. Herefter tilkommer 49 kr/md per ekstra bruger."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Er der binding?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nej, der er ingen binding. Du kan opsige dit abonnement med 1 måneds varsel. Ingen opsætningsgebyr, ingen bindingsperiode, ingen overraskelser."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Virker det på mobilen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja! SimplySag er bygget mobile-first og fungerer som en app på alle enheder. Det virker på iOS (iPhone og iPad) og Android via din browser — uden installation fra App Store eller Google Play."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvad hvis jeg har specielle behov?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kontakt os på support@simso.dk — vi tilbyder tilpassede løsninger til virksomheder med særlige behov. Vi er et dansk software-firma og besvarer alle henvendelser inden for 1 arbejdsdag."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvad er sagsstyring for håndværkere?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sagsstyring for håndværkere er et digitalt system til at holde styr på alle byggesager og opgaver. Med en sagsstyring app som SimplySag kan murere, tømrere, malere og VVS-installatører oprette sager, registrere timer, dokumentere med billeder og følge status på igangværende arbejde — alt fra telefonen. Det erstatter Excel-ark og papirnoter med et samlet overblik i realtid."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan SimplySag bruges af murere, malere og tømrere?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, SimplySag er designet til alle typer håndværkere — murere, malere, tømrere, VVS-installatører, elektrikere og anlægsgartnere. Appen er fleksibel og tilpasser sig din branche: du opretter sager efter eget behov, tilknytter medarbejdere og registrerer timer og materialer. Uanset om du er selvstændig eller har et lille team på 2-10 mand, passer SimplySag til din hverdag."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvordan registrerer mine medarbejdere timer i SimplySag?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dine medarbejdere logger ind i SimplySag via deres telefon eller tablet — ingen App Store nødvendig. De vælger den relevante sag og starter en timer med ét tryk, eller de indtaster timer manuelt. Du kan som ejer eller kontoransvarlig se alle registreringer i realtid og eksportere timesedler til CSV eller PDF til brug ved fakturering."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Virker SimplySag på iPhone og Android?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, SimplySag virker på både iPhone, iPad, Android-telefoner og tablets — samt på computer i browseren. Appen er en PWA (Progressive Web App), så du installerer den direkte fra Safari (iOS) eller Chrome (Android) uden App Store eller Google Play. Det fungerer ligesom en rigtig app med ikon på hjemmeskærmen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvad koster sagsstyring software til håndværkere?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SimplySag koster 199 DKK/måned for op til 3 brugere. Hver ekstra bruger koster 49 DKK/måned. Et 5-mands firma betaler altså 297 kr/md — og et 8-mands firma 444 kr/md. Sammenlignet med konkurrenter som Minuba og Apacha er SimplySag markant billigere og kræver ingen lang onboarding eller dyre konsulenter."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvad er forskellen på SimplySag og Minuba?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SimplySag og Minuba er begge sagsstyringssystemer til håndværkere, men der er vigtige forskelle: SimplySag er billigere og langt enklere at komme i gang med. Mens Minuba har mange avancerede funktioner, fokuserer SimplySag på det essentielle — sager, timer og materialer — så dine folk kan lære systemet på én dag. Ingen lang onboarding, ingen dyre konsulenter."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan jeg prøve SimplySag gratis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, du kan prøve SimplySag gratis i 30 dage. Bemærk at der kræves et kreditkort ved oprettelse — du opkræves ikke noget i prøveperioden, men abonnementet starter automatisk efter 30 dage, medmindre du opsiger. Du kan altid opsige med 1 måneds varsel uden beregning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvad sker der når prøveperioden udløber?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Når de 30 dages gratis prøveperiode udløber, overgår dit abonnement automatisk til det betalte abonnement. Dit kreditkort opkræves med 199 kr/md (plus 49 kr/md per bruger ud over 3). Ønsker du ikke at fortsætte, skal du opsige inden prøveperiodens udløb. Alle dine data, sager og medarbejdere er stadig tilgængelige ved overgang til betalt abonnement."
+            }
+          }
+        ]
       }
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Simply Solutions",
-      "url": "https://simplysolutions.dk",
-      "email": "support@simso.dk"
-    }
+    ]
   }
   </script>
 
@@ -177,7 +378,7 @@
       transition: max-height 0.35s ease, padding 0.2s ease;
     }
     .faq-content.open {
-      max-height: 200px;
+      max-height: 600px;
     }
     .faq-icon { transition: transform 0.3s ease; }
     .faq-item.open .faq-icon { transform: rotate(45deg); }
@@ -470,6 +671,82 @@
             <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Eksport til CSV og PDF</li>
           </ul>
         </div>
+        <!-- SVG 2: Time Registration Animation -->
+        <div class="mt-6 w-full overflow-hidden rounded-xl" aria-label="Tidsregistrering animation — medarbejder MN logger 7.5 timer på Tag-renovering" role="img">
+          <svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" width="100%" aria-hidden="true">
+            <style>
+              @keyframes countUp {
+                0%   { opacity: 0; }
+                10%  { opacity: 1; }
+                80%  { opacity: 1; }
+                100% { opacity: 1; }
+              }
+              @keyframes checkFade {
+                0%, 70% { opacity: 0; transform: scale(0.5); }
+                85%      { opacity: 1; transform: scale(1.1); }
+                100%     { opacity: 1; transform: scale(1); }
+              }
+              @keyframes progressGrow {
+                0%   { width: 0; }
+                80%  { width: 168px; }
+                100% { width: 168px; }
+              }
+              @keyframes h0   { 0%,5%   { opacity:1 } 15%,100% { opacity:0 } }
+              @keyframes h1   { 10%,20% { opacity:1 } 0%,9%,21%,100% { opacity:0 } }
+              @keyframes h2   { 23%,33% { opacity:1 } 0%,22%,34%,100% { opacity:0 } }
+              @keyframes h3   { 36%,46% { opacity:1 } 0%,35%,47%,100% { opacity:0 } }
+              @keyframes h4   { 49%,59% { opacity:1 } 0%,48%,60%,100% { opacity:0 } }
+              @keyframes h5   { 62%,72% { opacity:1 } 0%,61%,73%,100% { opacity:0 } }
+              @keyframes h6   { 75%,85% { opacity:1 } 0%,74%,86%,100% { opacity:0 } }
+              @keyframes hFin { 88%,100% { opacity:1 } 0%,87% { opacity:0 } }
+              .ts-h0   { animation: h0   5s ease-in-out infinite; }
+              .ts-h1   { animation: h1   5s ease-in-out infinite; }
+              .ts-h2   { animation: h2   5s ease-in-out infinite; }
+              .ts-h3   { animation: h3   5s ease-in-out infinite; }
+              .ts-h4   { animation: h4   5s ease-in-out infinite; }
+              .ts-h5   { animation: h5   5s ease-in-out infinite; }
+              .ts-h6   { animation: h6   5s ease-in-out infinite; }
+              .ts-hFin { animation: hFin 5s ease-in-out infinite; }
+              .ts-check { animation: checkFade 5s ease-in-out infinite; transform-origin: 337px 130px; }
+              .ts-bar   { animation: progressGrow 5s ease-in-out infinite; }
+            </style>
+            <!-- Background -->
+            <rect width="380" height="200" rx="16" fill="#eff6ff"/>
+            <!-- Card -->
+            <rect x="20" y="20" width="340" height="160" rx="12" fill="white" stroke="#dbeafe" stroke-width="1.5"/>
+            <!-- Avatar circle -->
+            <circle cx="60" cy="72" r="26" fill="#1e40af"/>
+            <text x="60" y="79" text-anchor="middle" fill="white" font-size="14" font-weight="700" font-family="system-ui">MN</text>
+            <!-- Job name -->
+            <text x="100" y="58" fill="#1e293b" font-size="13" font-weight="700" font-family="system-ui">Tag-renovering</text>
+            <text x="100" y="75" fill="#64748b" font-size="11" font-family="system-ui">Hansen · Svendborg</text>
+            <!-- Hours label -->
+            <text x="100" y="100" fill="#94a3b8" font-size="10" font-family="system-ui" text-anchor="start">TIMER REGISTRERET</text>
+            <!-- Animated hours counter -->
+            <text x="100" y="122" fill="#1e40af" font-size="22" font-weight="800" font-family="system-ui">
+              <tspan class="ts-h0">0,0</tspan>
+              <tspan class="ts-h1">1,0</tspan>
+              <tspan class="ts-h2">2,0</tspan>
+              <tspan class="ts-h3">3,0</tspan>
+              <tspan class="ts-h4">4,5</tspan>
+              <tspan class="ts-h5">5,5</tspan>
+              <tspan class="ts-h6">6,5</tspan>
+              <tspan class="ts-hFin">7,5</tspan>
+            </text>
+            <text x="155" y="122" fill="#94a3b8" font-size="13" font-family="system-ui">timer</text>
+            <!-- Progress bar bg -->
+            <rect x="100" y="135" width="168" height="8" rx="4" fill="#dbeafe"/>
+            <!-- Progress bar animated -->
+            <rect x="100" y="135" height="8" rx="4" fill="#1e40af" class="ts-bar"/>
+            <!-- Checkmark circle -->
+            <g class="ts-check">
+              <circle cx="337" cy="130" r="20" fill="#22c55e"/>
+              <polyline points="327,130 334,137 347,122" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <!-- Bottom status -->
+            <text x="100" y="165" fill="#64748b" font-size="10" font-family="system-ui">Status: I gang · Start/stop timer</text>
+          </svg>
+        </div>
       </div>
 
       <!-- Feature 2: Briefcase / Sagsstyring -->
@@ -509,6 +786,64 @@
             <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Tilknyt medarbejdere og materialer</li>
             <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Status og overblik i realtid</li>
           </ul>
+        </div>
+        <!-- SVG 1: App Dashboard Preview -->
+        <div class="mt-6 w-full overflow-hidden rounded-xl" aria-label="App-dashboard der viser 3 byggesager med statusbadges" role="img">
+          <svg viewBox="0 0 460 280" xmlns="http://www.w3.org/2000/svg" width="100%" aria-hidden="true">
+            <style>
+              @keyframes badgePulse {
+                0%, 100% { opacity: 1; transform: scale(1); }
+                50%       { opacity: 0.75; transform: scale(1.06); }
+              }
+              .badge-ny   { animation: badgePulse 2.4s ease-in-out infinite; transform-origin: 392px 78px; }
+              .badge-ig   { animation: badgePulse 2.4s ease-in-out infinite 0.8s; transform-origin: 380px 148px; }
+              .badge-afs  { animation: badgePulse 2.4s ease-in-out infinite 1.6s; transform-origin: 385px 218px; }
+            </style>
+            <!-- Background -->
+            <rect width="460" height="280" rx="16" fill="#1e293b"/>
+            <!-- Header bar -->
+            <rect x="0" y="0" width="460" height="44" rx="16" fill="#0f172a"/>
+            <rect x="0" y="28" width="460" height="16" fill="#0f172a"/>
+            <text x="20" y="28" fill="white" font-size="13" font-weight="700" font-family="system-ui">SimplySag</text>
+            <text x="20" y="42" fill="#94a3b8" font-size="10" font-family="system-ui">Mine sager</text>
+            <!-- Search bar hint -->
+            <rect x="260" y="14" width="160" height="20" rx="10" fill="#1e40af" fill-opacity="0.3"/>
+            <text x="340" y="29" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="system-ui">🔍 Søg sager...</text>
+            <!-- Case card 1 -->
+            <rect x="20" y="56" width="420" height="60" rx="10" fill="#1e3a5f"/>
+            <rect x="20" y="56" width="4" height="60" rx="2" fill="#3b82f6"/>
+            <text x="36" y="76" fill="white" font-size="12" font-weight="700" font-family="system-ui">Renovering - Hansen</text>
+            <text x="36" y="93" fill="#94a3b8" font-size="10" font-family="system-ui">Odense · 3 medarbejdere</text>
+            <text x="36" y="108" fill="#64748b" font-size="9" font-family="system-ui">⏱ 12,5 timer · 📷 4 billeder</text>
+            <g class="badge-ny">
+              <rect x="360" y="66" width="64" height="22" rx="11" fill="#3b82f6"/>
+              <text x="392" y="81" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="system-ui">Ny</text>
+            </g>
+            <!-- Case card 2 -->
+            <rect x="20" y="126" width="420" height="60" rx="10" fill="#1e3a5f"/>
+            <rect x="20" y="126" width="4" height="60" rx="2" fill="#f97316"/>
+            <text x="36" y="146" fill="white" font-size="12" font-weight="700" font-family="system-ui">Tilbygning - Jensen</text>
+            <text x="36" y="163" fill="#94a3b8" font-size="10" font-family="system-ui">Kolding · 5 medarbejdere</text>
+            <text x="36" y="178" fill="#64748b" font-size="9" font-family="system-ui">⏱ 47,0 timer · 📷 18 billeder</text>
+            <g class="badge-ig">
+              <rect x="344" y="136" width="80" height="22" rx="11" fill="#f97316"/>
+              <text x="384" y="151" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="system-ui">I gang</text>
+            </g>
+            <!-- Case card 3 -->
+            <rect x="20" y="196" width="420" height="60" rx="10" fill="#1e3a5f"/>
+            <rect x="20" y="196" width="4" height="60" rx="2" fill="#22c55e"/>
+            <text x="36" y="216" fill="white" font-size="12" font-weight="700" font-family="system-ui">VVS-reparation - Møller</text>
+            <text x="36" y="233" fill="#94a3b8" font-size="10" font-family="system-ui">Svendborg · 2 medarbejdere</text>
+            <text x="36" y="248" fill="#64748b" font-size="9" font-family="system-ui">⏱ 8,0 timer · 📷 6 billeder</text>
+            <g class="badge-afs">
+              <rect x="342" y="206" width="88" height="22" rx="11" fill="#22c55e"/>
+              <text x="386" y="221" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="system-ui">Afsluttet</text>
+            </g>
+            <!-- Bottom bar -->
+            <rect x="0" y="264" width="460" height="16" rx="0" fill="#0f172a"/>
+            <rect x="0" y="256" width="460" height="24" rx="0" fill="#0f172a"/>
+            <rect x="0" y="264" width="460" height="16" rx="16" fill="#0f172a"/>
+          </svg>
         </div>
       </div>
 
@@ -579,6 +914,65 @@
         <p class="text-2xl sm:text-3xl font-bold leading-snug mb-3">"Endelig et system, der er bygget til os på gulvet."</p>
         <footer class="text-blue-200 text-sm">— Bygget til danske håndværkere</footer>
       </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     HÅNDVÆRKER-TYPER
+============================= -->
+<section class="py-20 md:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16 fade-up">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Sagsstyring til alle typer håndværkere</h2>
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto">Fra murermesteren til anlægsgartneren — SimplySag tilpasser sig din branche og dit team.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Murere -->
+      <div class="fade-up glass-card rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.05s">
+        <span class="text-4xl mb-4" role="img" aria-label="Murer">🧱</span>
+        <h3 class="text-base font-bold text-text-main mb-2">Murere</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Registrér timer og materialer pr. byggesag — og hold altid styr på hvad der er faktureret og hvad der mangler.</p>
+      </div>
+
+      <!-- Malere -->
+      <div class="fade-up glass-card rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.08s">
+        <span class="text-4xl mb-4" role="img" aria-label="Maler">🎨</span>
+        <h3 class="text-base font-bold text-text-main mb-2">Malere</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Dokumentér før- og efterbilleder af malerarbejdet direkte i sagen, og eksportér timesedler til faktura med ét klik.</p>
+      </div>
+
+      <!-- Tømrere -->
+      <div class="fade-up glass-card rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.11s">
+        <span class="text-4xl mb-4" role="img" aria-label="Tømrer">🪚</span>
+        <h3 class="text-base font-bold text-text-main mb-2">Tømrere</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Styr tilbygninger, tagrenoveringer og køkkeninstallationer fra opstart til afslutning med fuld medarbejder- og materialoversigt.</p>
+      </div>
+
+      <!-- VVS -->
+      <div class="fade-up glass-card rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.14s">
+        <span class="text-4xl mb-4" role="img" aria-label="VVS-installatør">🔧</span>
+        <h3 class="text-base font-bold text-text-main mb-2">VVS-installatører</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Log hasteudkald og planlagte serviceopgaver i samme system, og lad dine montører registrere timer direkte fra kundeadressen.</p>
+      </div>
+
+      <!-- Elektrikere -->
+      <div class="fade-up glass-card rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.17s">
+        <span class="text-4xl mb-4" role="img" aria-label="Elektriker">⚡</span>
+        <h3 class="text-base font-bold text-text-main mb-2">Elektrikere</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Hold styr på elinstallationer, fejlmeldinger og materialelagre pr. sag — og giv kunden en præcis opgørelse ved afslutning.</p>
+      </div>
+
+      <!-- Anlægsgartnere -->
+      <div class="fade-up glass-card rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.20s">
+        <span class="text-4xl mb-4" role="img" aria-label="Anlægsgartner">🌿</span>
+        <h3 class="text-base font-bold text-text-main mb-2">Anlægsgartnere</h3>
+        <p class="text-slate-500 text-xs leading-relaxed">Administrér sæsonens anlægsprojekter, hold styr på plantekøb og timeregistreringer, og følg op på igangværende haveanlæg.</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -881,6 +1275,75 @@
 
     </div>
 
+    <!-- SVG 3: Works on all devices -->
+    <div class="mt-12 max-w-2xl mx-auto fade-up" aria-label="SimplySag virker på smartphone, tablet og laptop" role="img">
+      <svg viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg" width="100%" aria-hidden="true">
+        <style>
+          @keyframes devFadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+          .dev-phone  { animation: devFadeIn 0.7s ease-out 0.1s both; }
+          .dev-tablet { animation: devFadeIn 0.7s ease-out 0.4s both; }
+          .dev-laptop { animation: devFadeIn 0.7s ease-out 0.7s both; }
+          @keyframes screenGlow {
+            0%,100% { fill: #1e40af; }
+            50%      { fill: #3b82f6; }
+          }
+          .screen-glow { animation: screenGlow 3s ease-in-out infinite; }
+        </style>
+        <!-- Background -->
+        <rect width="500" height="260" rx="16" fill="#f8fafc"/>
+
+        <!-- Smartphone -->
+        <g class="dev-phone">
+          <rect x="40" y="50" width="80" height="140" rx="14" fill="none" stroke="#94a3b8" stroke-width="3"/>
+          <rect x="40" y="50" width="80" height="140" rx="14" fill="#f1f5f9"/>
+          <!-- Home bar -->
+          <rect x="65" y="178" width="30" height="4" rx="2" fill="#cbd5e1"/>
+          <!-- Screen -->
+          <rect x="50" y="70" width="60" height="100" rx="6" class="screen-glow" fill="#1e40af" fill-opacity="0.9"/>
+          <!-- Logo text -->
+          <text x="80" y="108" text-anchor="middle" fill="white" font-size="8" font-weight="700" font-family="system-ui">Simply</text>
+          <text x="80" y="120" text-anchor="middle" fill="#fbbf24" font-size="8" font-weight="700" font-family="system-ui">Sag</text>
+          <!-- Label -->
+          <text x="80" y="210" text-anchor="middle" fill="#64748b" font-size="10" font-family="system-ui">iPhone &amp; Android</text>
+        </g>
+
+        <!-- Tablet -->
+        <g class="dev-tablet">
+          <rect x="160" y="30" width="120" height="160" rx="14" fill="none" stroke="#94a3b8" stroke-width="3"/>
+          <rect x="160" y="30" width="120" height="160" rx="14" fill="#f1f5f9"/>
+          <!-- Home bar -->
+          <rect x="205" y="178" width="30" height="4" rx="2" fill="#cbd5e1"/>
+          <!-- Screen -->
+          <rect x="172" y="48" width="96" height="122" rx="6" class="screen-glow" fill="#1e40af" fill-opacity="0.9"/>
+          <!-- Logo text -->
+          <text x="220" y="103" text-anchor="middle" fill="white" font-size="11" font-weight="700" font-family="system-ui">Simply</text>
+          <text x="220" y="118" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700" font-family="system-ui">Sag</text>
+          <!-- Label -->
+          <text x="220" y="210" text-anchor="middle" fill="#64748b" font-size="10" font-family="system-ui">iPad &amp; Tablet</text>
+        </g>
+
+        <!-- Laptop -->
+        <g class="dev-laptop">
+          <!-- Screen part -->
+          <rect x="310" y="50" width="150" height="110" rx="8" fill="none" stroke="#94a3b8" stroke-width="3"/>
+          <rect x="310" y="50" width="150" height="110" rx="8" fill="#f1f5f9"/>
+          <!-- Screen interior -->
+          <rect x="322" y="62" width="126" height="90" rx="4" class="screen-glow" fill="#1e40af" fill-opacity="0.9"/>
+          <!-- Logo text -->
+          <text x="385" y="103" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="system-ui">Simply</text>
+          <text x="385" y="120" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="700" font-family="system-ui">Sag</text>
+          <!-- Keyboard base -->
+          <rect x="295" y="160" width="180" height="10" rx="5" fill="#94a3b8"/>
+          <rect x="350" y="155" width="70" height="8" rx="3" fill="#cbd5e1"/>
+          <!-- Label -->
+          <text x="385" y="190" text-anchor="middle" fill="#64748b" font-size="10" font-family="system-ui">Computer &amp; Mac</text>
+        </g>
+
+        <!-- Center tagline -->
+        <text x="250" y="238" text-anchor="middle" fill="#1e40af" font-size="12" font-weight="600" font-family="system-ui">Virker på alle enheder — ingen App Store nødvendig</text>
+      </svg>
+    </div>
+
     <!-- Bottom note -->
     <div class="mt-10 text-center fade-up">
       <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 rounded-2xl px-6 py-3 text-sm text-slate-600">
@@ -891,6 +1354,65 @@
         </svg>
         App'en virker på alle enheder: iPhone, Android, iPad og computer — ingen installation fra App Store nødvendig.
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     TESTIMONIALS
+============================= -->
+<section class="py-20 md:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16 fade-up">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-text-main mb-4">Det siger håndværkerne</h2>
+      <p class="text-lg text-slate-500 max-w-xl mx-auto">Rigtige håndværkere, rigtige resultater — fra dag ét.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Quote 1 -->
+      <div class="fade-up glass-card rounded-3xl p-8 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-primary" style="animation-delay:0.05s">
+        <div class="text-6xl text-primary/20 font-serif leading-none mb-4 select-none" aria-hidden="true">"</div>
+        <blockquote class="flex-1">
+          <p class="text-slate-600 text-sm leading-relaxed italic mb-6">
+            Som muremester med 5 ansatte druknede vi i papir og Excel-ark. Nu logger folkene timer direkte fra telefonen — og jeg kan følge med fra kontoret.
+          </p>
+        </blockquote>
+        <footer>
+          <p class="font-bold text-text-main text-sm">Morten K.</p>
+          <p class="text-slate-500 text-xs">Muremester, Odense</p>
+        </footer>
+      </div>
+
+      <!-- Quote 2 -->
+      <div class="fade-up glass-card rounded-3xl p-8 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-primary" style="animation-delay:0.10s">
+        <div class="text-6xl text-primary/20 font-serif leading-none mb-4 select-none" aria-hidden="true">"</div>
+        <blockquote class="flex-1">
+          <p class="text-slate-600 text-sm leading-relaxed italic mb-6">
+            Endelig et system der er billigt nok til en lille tømrervirksomhed. Nem at komme i gang med, og mine folk lærte det på én dag.
+          </p>
+        </blockquote>
+        <footer>
+          <p class="font-bold text-text-main text-sm">Susanne R.</p>
+          <p class="text-slate-500 text-xs">Tømrermester, Kolding</p>
+        </footer>
+      </div>
+
+      <!-- Quote 3 -->
+      <div class="fade-up glass-card rounded-3xl p-8 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-primary" style="animation-delay:0.15s">
+        <div class="text-6xl text-primary/20 font-serif leading-none mb-4 select-none" aria-hidden="true">"</div>
+        <blockquote class="flex-1">
+          <p class="text-slate-600 text-sm leading-relaxed italic mb-6">
+            Oprettede firmaet tirsdag aften, og vi kørte fuldt i gang torsdag morgen. Ingen lange onboardingforløb eller dyre konsulenter.
+          </p>
+        </blockquote>
+        <footer>
+          <p class="font-bold text-text-main text-sm">Kenneth A.</p>
+          <p class="text-slate-500 text-xs">VVS-installatør, Svendborg</p>
+        </footer>
+      </div>
+
     </div>
   </div>
 </section>
@@ -962,6 +1484,110 @@
             Kontakt os på <a href="mailto:support@simso.dk" class="text-primary font-semibold hover:underline">support@simso.dk</a> — 
             vi tilbyder <strong class="text-text-main">tilpassede løsninger</strong> til virksomheder med særlige behov. 
             Vi er et dansk software-firma og besvarer alle henvendelser inden for 1 arbejdsdag.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item fade-up glass-card rounded-2xl overflow-hidden" data-index="4" style="animation-delay:0.17s">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-blue-50/50 transition-colors" aria-expanded="false">
+          <span class="font-semibold text-text-main pr-4">Hvad er sagsstyring for håndværkere?</span>
+          <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-content px-6">
+          <p class="text-slate-600 text-sm leading-relaxed pb-6">
+            Sagsstyring for håndværkere er et digitalt system til at holde styr på alle byggesager og opgaver. Med en <strong class="text-text-main">sagsstyring app</strong> som SimplySag kan murere, tømrere, malere og VVS-installatører oprette sager, registrere timer, dokumentere med billeder og følge status på igangværende arbejde — alt fra telefonen. Det erstatter Excel-ark og papirnoter med et samlet overblik i realtid.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="faq-item fade-up glass-card rounded-2xl overflow-hidden" data-index="5" style="animation-delay:0.20s">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-blue-50/50 transition-colors" aria-expanded="false">
+          <span class="font-semibold text-text-main pr-4">Kan SimplySag bruges af murere, malere og tømrere?</span>
+          <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-content px-6">
+          <p class="text-slate-600 text-sm leading-relaxed pb-6">
+            Ja, SimplySag er designet til alle typer håndværkere — <strong class="text-text-main">murere, malere, tømrere, VVS-installatører, elektrikere</strong> og anlægsgartnere. Appen er fleksibel og tilpasser sig din branche: du opretter sager efter eget behov, tilknytter medarbejdere og registrerer timer og materialer. Uanset om du er selvstændig eller har et lille team på 2–10 mand, passer SimplySag til din hverdag.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 7 -->
+      <div class="faq-item fade-up glass-card rounded-2xl overflow-hidden" data-index="6" style="animation-delay:0.23s">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-blue-50/50 transition-colors" aria-expanded="false">
+          <span class="font-semibold text-text-main pr-4">Hvordan registrerer mine medarbejdere timer i SimplySag?</span>
+          <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-content px-6">
+          <p class="text-slate-600 text-sm leading-relaxed pb-6">
+            Dine medarbejdere logger ind i SimplySag via deres telefon eller tablet — ingen App Store nødvendig. De vælger den relevante sag og <strong class="text-text-main">starter en timer med ét tryk</strong>, eller de indtaster timer manuelt. Du kan som ejer eller kontoransvarlig se alle registreringer i realtid og eksportere timesedler til CSV eller PDF til brug ved fakturering.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 8 -->
+      <div class="faq-item fade-up glass-card rounded-2xl overflow-hidden" data-index="7" style="animation-delay:0.26s">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-blue-50/50 transition-colors" aria-expanded="false">
+          <span class="font-semibold text-text-main pr-4">Virker SimplySag på iPhone og Android?</span>
+          <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-content px-6">
+          <p class="text-slate-600 text-sm leading-relaxed pb-6">
+            Ja, SimplySag virker på både <strong class="text-text-main">iPhone, iPad, Android-telefoner og tablets</strong> — samt på computer i browseren. Appen er en PWA (Progressive Web App), så du installerer den direkte fra Safari (iOS) eller Chrome (Android) uden App Store eller Google Play. Det fungerer ligesom en rigtig app med ikon på hjemmeskærmen.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 9 -->
+      <div class="faq-item fade-up glass-card rounded-2xl overflow-hidden" data-index="8" style="animation-delay:0.29s">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-blue-50/50 transition-colors" aria-expanded="false">
+          <span class="font-semibold text-text-main pr-4">Hvad koster sagsstyring software til håndværkere?</span>
+          <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-content px-6">
+          <p class="text-slate-600 text-sm leading-relaxed pb-6">
+            SimplySag koster <strong class="text-text-main">199 DKK/måned</strong> for op til 3 brugere. Hver ekstra bruger koster 49 DKK/måned. Et 5-mands firma betaler altså 297 kr/md — og et 8-mands firma 444 kr/md. Sammenlignet med konkurrenter som Minuba og Apacha er SimplySag markant billigere og kræver ingen lang onboarding eller dyre konsulenter.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 10 -->
+      <div class="faq-item fade-up glass-card rounded-2xl overflow-hidden" data-index="9" style="animation-delay:0.32s">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-blue-50/50 transition-colors" aria-expanded="false">
+          <span class="font-semibold text-text-main pr-4">Hvad er forskellen på SimplySag og Minuba?</span>
+          <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-content px-6">
+          <p class="text-slate-600 text-sm leading-relaxed pb-6">
+            SimplySag og Minuba er begge sagsstyringssystemer til håndværkere, men der er vigtige forskelle: <strong class="text-text-main">SimplySag er billigere</strong> og langt enklere at komme i gang med. Mens Minuba har mange avancerede funktioner, fokuserer SimplySag på det essentielle — sager, timer og materialer — så dine folk kan lære systemet på én dag. Ingen lang onboarding, ingen dyre konsulenter.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 11 -->
+      <div class="faq-item fade-up glass-card rounded-2xl overflow-hidden" data-index="10" style="animation-delay:0.35s">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-blue-50/50 transition-colors" aria-expanded="false">
+          <span class="font-semibold text-text-main pr-4">Kan jeg prøve SimplySag gratis?</span>
+          <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-content px-6">
+          <p class="text-slate-600 text-sm leading-relaxed pb-6">
+            Ja, du kan prøve SimplySag gratis i <strong class="text-text-main">30 dage</strong>. Bemærk at der kræves et kreditkort ved oprettelse — du opkræves ikke noget i prøveperioden, men abonnementet starter automatisk efter 30 dage, medmindre du opsiger. Du kan altid opsige med 1 måneds varsel uden beregning.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 12 -->
+      <div class="faq-item fade-up glass-card rounded-2xl overflow-hidden" data-index="11" style="animation-delay:0.38s">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-blue-50/50 transition-colors" aria-expanded="false">
+          <span class="font-semibold text-text-main pr-4">Hvad sker der når prøveperioden udløber?</span>
+          <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+        </button>
+        <div class="faq-content px-6">
+          <p class="text-slate-600 text-sm leading-relaxed pb-6">
+            Når de 30 dages gratis prøveperiode udløber, overgår dit abonnement automatisk til det betalte abonnement. Dit kreditkort opkræves med <strong class="text-text-main">199 kr/md</strong> (plus 49 kr/md per bruger ud over 3). Ønsker du ikke at fortsætte, skal du opsige inden prøveperiodens udløb. Alle dine data, sager og medarbejdere er stadig tilgængelige ved overgang til betalt abonnement.
           </p>
         </div>
       </div>
