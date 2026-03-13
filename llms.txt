@@ -63,3 +63,9 @@ support@simso.dk
 - /timeregistrering-haandvaerker/ — kommerciel side om timeregistrering til håndværkere
 
 - /bedste-sagsstyring-haandvaerker/ — kommerciel guide om valg af sagsstyring til små håndværkerfirmaer
+
+- /timeseddel-app-haandvaerker/ — kommerciel side for timeseddel app til håndværkere
+
+- /app-til-haandvaerker/ — kommerciel side for bredt app-til-håndværker intent
+
+- /materialeregistrering-haandvaerker/ — kommerciel side for materialeregistrering til håndværkere
