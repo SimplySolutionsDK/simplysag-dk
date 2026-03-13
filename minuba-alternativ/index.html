@@ -33,6 +33,14 @@
       backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(30,64,175,0.08);
     }
+    .comparison-table-wrap { overflow-x: auto; border-radius: 1.5rem; }
+    .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+    .comparison-table th, .comparison-table td { padding: 0.9rem 1rem; text-align: left; }
+    .comparison-table thead th { font-size: 0.9rem; color: #0f172a; border-bottom: 1px solid #cbd5e1; }
+    .comparison-table tbody td { font-size: 0.92rem; color: #334155; border-bottom: 1px solid #e2e8f0; }
+    .comparison-table tbody tr:last-child td { border-bottom: none; }
+    .comparison-highlight { background: #eff6ff; }
+    .comparison-badge { display:inline-flex; align-items:center; gap:0.35rem; background:#dbeafe; color:#1d4ed8; border-radius:9999px; padding:0.2rem 0.55rem; font-size:0.72rem; font-weight:700; margin-left:0.5rem; }
     .trust-pill {
       display: inline-flex;
       align-items: center;
@@ -152,40 +160,61 @@
 
     <section class="glass-card rounded-3xl p-8 shadow-sm mb-10">
       <h2 class="text-2xl font-bold text-slate-900 mb-6">Kort sammenligning</h2>
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm">
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
           <thead>
             <tr class="border-b border-slate-200 text-left">
               <th class="py-3 pr-4 font-semibold text-slate-900">Punkt</th>
-              <th class="py-3 px-4 font-semibold text-slate-900">SimplySag</th>
+              <th class="py-3 px-4 font-semibold text-slate-900 comparison-highlight">SimplySag <span class="comparison-badge">Bedst til små teams</span></th>
               <th class="py-3 pl-4 font-semibold text-slate-900">Minuba</th>
             </tr>
           </thead>
           <tbody class="text-slate-700">
             <tr class="border-b border-slate-100">
               <td class="py-3 pr-4">Primær målgruppe</td>
-              <td class="py-3 px-4">Små håndværkerfirmaer</td>
+              <td class="py-3 px-4 comparison-highlight">Små håndværkerfirmaer</td>
               <td class="py-3 pl-4">Bredere marked</td>
             </tr>
             <tr class="border-b border-slate-100">
               <td class="py-3 pr-4">Kom i gang</td>
-              <td class="py-3 px-4">Hurtigt og enkelt</td>
+              <td class="py-3 px-4 comparison-highlight">Hurtigt og enkelt</td>
               <td class="py-3 pl-4">Typisk mere opsætning</td>
             </tr>
             <tr class="border-b border-slate-100">
               <td class="py-3 pr-4">Mobil brug</td>
-              <td class="py-3 px-4">Bygget til telefonen først</td>
+              <td class="py-3 px-4 comparison-highlight">Bygget til telefonen først</td>
               <td class="py-3 pl-4">Afhænger af arbejdsgang</td>
             </tr>
             <tr>
               <td class="py-3 pr-4">Prisniveau</td>
-              <td class="py-3 px-4">Fra 199 kr/md</td>
+              <td class="py-3 px-4 comparison-highlight">Fra 199 kr/md</td>
               <td class="py-3 pl-4">Ofte højere samlet setup</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p class="text-xs text-slate-500 mt-4">Bemærk: Sammenligningen er bevidst enkel og skrevet til små håndværkerfirmaer, der vurderer hvilket system der passer til deres hverdag.</p>
+    </section>
+
+    <section class="mt-12 mb-12">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Relaterede sider</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/sagsstyring-haandvaerker/" class="glass-card rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="text-xs font-semibold uppercase tracking-wider text-blue-700 mb-2">Guide</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Sagsstyring til håndværkere</h3>
+          <p class="text-sm text-slate-600">Få overblik over hvordan små håndværkerfirmaer typisk bruger sagsstyring i praksis.</p>
+        </a>
+        <a href="/bedste-sagsstyring-haandvaerker/" class="glass-card rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="text-xs font-semibold uppercase tracking-wider text-blue-700 mb-2">Guide</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Bedste sagsstyring til håndværkere</h3>
+          <p class="text-sm text-slate-600">Se hvilke kriterier der betyder mest når mindre firmaer vælger system.</p>
+        </a>
+        <a href="/brancher/" class="glass-card rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="text-xs font-semibold uppercase tracking-wider text-blue-700 mb-2">Brancher</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Se alle branchesider</h3>
+          <p class="text-sm text-slate-600">Find sider målrettet murere, tømrere, VVS, kloak, rengøring og flere.</p>
+        </a>
+      </div>
     </section>
 
     <section class="bg-blue-950 text-white rounded-3xl p-8 sm:p-10">
