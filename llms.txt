@@ -53,3 +53,7 @@ support@simso.dk
 - /minuba-vs-simplysag/ — direkte sammenligning mellem Minuba og SimplySag for små håndværkerfirmaer
 
 - /ordrestyring-vs-simplysag/ — direkte sammenligning mellem Ordrestyring og SimplySag
+
+- /apacha-vs-simplysag/ — direkte sammenligning mellem Apacha og SimplySag for små håndværkerfirmaer
+
+- /billig-sagsstyring-haandvaerker/ — kommerciel side for prisfølsomme håndværkerfirmaer der søger billig sagsstyring
