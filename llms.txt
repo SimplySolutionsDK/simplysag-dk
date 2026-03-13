@@ -47,3 +47,9 @@ SimplySag konkurrerer med Minuba, Apacha og Orderstyring. SimplySag fokuserer p�
 
 ## Kontakt og support
 support@simso.dk
+
+- /apacha-alternativ/ — sammenligningsside for virksomheder der leder efter et alternativ til Apacha
+
+- /minuba-vs-simplysag/ — direkte sammenligning mellem Minuba og SimplySag for små håndværkerfirmaer
+
+- /ordrestyring-vs-simplysag/ — direkte sammenligning mellem Ordrestyring og SimplySag
