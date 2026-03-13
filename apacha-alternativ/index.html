@@ -37,6 +37,27 @@
     .comparison-table tbody tr:last-child td { border-bottom: none; }
     .comparison-highlight { background: #eff6ff; }
     .comparison-badge { display:inline-flex; align-items:center; gap:0.35rem; background:#dbeafe; color:#1d4ed8; border-radius:9999px; padding:0.2rem 0.55rem; font-size:0.72rem; font-weight:700; margin-left:0.5rem; }
+    
+    .hero-visual {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: 0 10px 32px rgba(15,23,42,0.10);
+      min-height: 260px;
+      background: linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #fff7ed 100%);
+    }
+    .hero-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .hero-visual:hover img { transform: scale(1.03); }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30,64,175,0.08), rgba(15,23,42,0.35)); }
+    .hero-badge { position: absolute; left: 1rem; bottom: 1rem; background: rgba(255,255,255,0.92); color: #0f172a; border-radius: 1rem; padding: 0.85rem 1rem; box-shadow: 0 8px 24px rgba(15,23,42,0.10); font-size: 0.85rem; font-weight: 700; max-width: 18rem; }
+    .hero-grid { display:grid; grid-template-columns: 1.15fr 0.85fr; gap:2rem; align-items:center; }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+    .float-svg { animation: floatY 4s ease-in-out infinite; }
+    @keyframes floatY { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+    .pulse-dot { animation: pulseDot 2.5s ease-in-out infinite; }
+    @keyframes pulseDot { 0%,100% { opacity: .45; transform: scale(1); } 50% { opacity: 1; transform: scale(1.15); } }
+
     .trust-pill {
       display: inline-flex;
       align-items: center;
@@ -96,11 +117,22 @@
     <a href="/" class="inline-flex items-center text-sm font-medium text-blue-700 hover:underline mb-8">← Tilbage til forsiden</a>
 
     <header class="mb-12">
-      <span class="inline-flex items-center rounded-full bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 mb-4">Sammenligning</span>
+      <div class="hero-grid">
+        <div>
+<span class="inline-flex items-center rounded-full bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 mb-4">Sammenligning</span>
       <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-5">Leder du efter et alternativ til Apacha?</h1>
       <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
         Hvis du er på vej rundt i markedet for sagsstyring og ordrestyring, er Apacha et af de systemer man ofte støder på. For nogle firmaer giver det mening. For andre bliver spørgsmålet i stedet: findes der en enklere løsning, som er lettere at få ind i hverdagen? Det er dér SimplySag kommer ind.
       </p>
+        </div>
+        <div>
+          <div class="hero-visual glass-card">
+  <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=1200&q=75&fm=webp" alt="Sammenligning af systemer til håndværkerfirmaer" loading="lazy" decoding="async">
+  <div class="hero-overlay"></div>
+  <div class="hero-badge">Sammenlign løsninger på pris, opstart og hvor let de er at bruge i hverdagen.</div>
+</div>
+        </div>
+      </div>
     </header>
 
     <section class="glass-card rounded-3xl p-8 shadow-sm mb-10">
