@@ -1,0 +1,115 @@
+{
+  "baseKeyword": "sagsstyring",
+  "siteUrl": "https://simplysag.dk",
+  "defaultCtaUrl": "https://simplysag-app.web.app",
+  "professions": [
+    {
+      "slug": "sagsstyring-murer",
+      "title": "Sagsstyring til murere",
+      "group": "murere",
+      "companies": "murerfirmaer",
+      "examples": "mureropgaver, renoveringer, facader og badeværelser",
+      "intro": "Registrér timer, materialer og billeder pr. mureropgave, så du har styr på både små reparationer og større byggesager.",
+      "synonyms": ["murer", "murere", "murermester", "murerfirma"]
+    },
+    {
+      "slug": "sagsstyring-toemrer",
+      "title": "Sagsstyring til tømrere",
+      "group": "tømrervirksomheder",
+      "companies": "tømrerfirmaer",
+      "examples": "tagarbejde, tilbygninger, køkkener og renoveringer",
+      "intro": "Hold styr på sager, medarbejdere og materialer på tværs af både serviceopgaver og længere tømrerprojekter.",
+      "synonyms": ["tømrer", "toemrer", "tømrerfirma", "snedker"]
+    },
+    {
+      "slug": "sagsstyring-vvs",
+      "title": "Sagsstyring til VVS-firmaer",
+      "group": "VVS-installatører",
+      "companies": "VVS-firmaer",
+      "examples": "servicekald, installationer, varme og sanitet",
+      "intro": "Brug SimplySag til at styre VVS-opgaver, registrere timer ude hos kunden og samle dokumentation på samme sag.",
+      "synonyms": ["vvs", "vvs-firma", "vvs installatør", "blikkenslager vvs"]
+    },
+    {
+      "slug": "sagsstyring-maler",
+      "title": "Sagsstyring til malere",
+      "group": "malere",
+      "companies": "malerfirmaer",
+      "examples": "flyttelejligheder, facader, erhverv og vedligehold",
+      "intro": "Få styr på timer, materialer og før/efter-billeder, så både udførsel og dokumentation følger sagen.",
+      "synonyms": ["maler", "malere", "malerfirma", "malermester"]
+    },
+    {
+      "slug": "sagsstyring-elektriker",
+      "title": "Sagsstyring til elektrikere",
+      "group": "elektrikere",
+      "companies": "el-firmaer",
+      "examples": "elinstallationer, fejlfinding, service og projektarbejde",
+      "intro": "Hold styr på opgaver, timeregistrering og materialer, uanset om det er mindre servicebesøg eller større el-sager.",
+      "synonyms": ["elektriker", "elektrikere", "elfirma", "el-installatør"]
+    },
+    {
+      "slug": "sagsstyring-anlaegsgartner",
+      "title": "Sagsstyring til anlægsgartnere",
+      "group": "anlægsgartnere",
+      "companies": "anlægsgartnerfirmaer",
+      "examples": "haver, belægning, vedligehold og grønne anlæg",
+      "intro": "Planlæg opgaver, registrér timer og dokumentér arbejdet med billeder direkte fra telefonen.",
+      "synonyms": ["anlægsgartner", "anlaegsgartner", "gartnerfirma", "havefirma"]
+    },
+    {
+      "slug": "sagsstyring-kloakmester",
+      "title": "Sagsstyring til kloakmestre",
+      "group": "kloakmestre",
+      "companies": "kloakfirmaer",
+      "examples": "dræn, TV-inspektion, reparationer og akutte opgaver",
+      "intro": "Kloakarbejde kræver dokumentation og overblik. SimplySag samler opgaver, billeder og timer ét sted.",
+      "synonyms": ["kloakmester", "kloak", "kloakfirma", "dræn"]
+    },
+    {
+      "slug": "sagsstyring-rengoering",
+      "title": "Sagsstyring til rengøringsfirmaer",
+      "group": "rengøringsfirmaer",
+      "companies": "rengøringsfirmaer",
+      "examples": "erhvervsrengøring, faste aftaler og servicebesøg",
+      "intro": "Brug SimplySag til at holde styr på faste kunder, opgaver, medarbejdere og tidsforbrug i hverdagen.",
+      "synonyms": ["rengøring", "rengoering", "rengøringsfirma", "erhvervsrengøring", "cleaning"]
+    },
+    {
+      "slug": "sagsstyring-blikkenslager",
+      "title": "Sagsstyring til blikkenslagere",
+      "group": "blikkenslagere",
+      "companies": "blik- og tagfirmaer",
+      "examples": "tagrender, inddækninger, facadeblik og service",
+      "intro": "Få bedre overblik over sager, materialer og arbejdstid på både små og større blikopgaver.",
+      "synonyms": ["blikkenslager", "blikarbejde", "tagrender"]
+    },
+    {
+      "slug": "sagsstyring-gulvlaegger",
+      "title": "Sagsstyring til gulvlæggere",
+      "group": "gulvlæggere",
+      "companies": "gulvfirmaer",
+      "examples": "vinyl, trægulve, epoxygulve og renovering",
+      "intro": "Saml opgaver, materialeforbrug og billeddokumentation, så du lettere kan følge hver sag fra opstart til aflevering.",
+      "synonyms": ["gulvlægger", "gulvlaegger", "gulvfirma", "epoxy gulv"]
+    },
+    {
+      "slug": "sagsstyring-vinduespudser",
+      "title": "Sagsstyring til vinduespudsere",
+      "group": "vinduespudsere",
+      "companies": "vinduespudserfirmaer",
+      "examples": "faste ruter, erhvervskunder og enkeltopgaver",
+      "intro": "Hold styr på tilbagevendende opgaver, tidsforbrug og hvilke medarbejdere der er sendt hvorhen.",
+      "synonyms": ["vinduespudser", "vinduespolering", "vinduespudsning"]
+    },
+    {
+      "slug": "sagsstyring-nedrivning",
+      "title": "Sagsstyring til nedrivningsfirmaer",
+      "group": "nedrivningsfirmaer",
+      "companies": "nedrivningsfirmaer",
+      "examples": "selektiv nedrivning, rydning og dokumentation",
+      "intro": "Når der er mange delopgaver og meget dokumentation, hjælper SimplySag med at samle status, timer og billeder på sagen.",
+      "synonyms": ["nedrivning", "nedrivningsfirma", "sanering"]
+    }
+  ]
+}

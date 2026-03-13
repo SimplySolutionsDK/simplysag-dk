@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-03-13",
+  "items": [
+    {
+      "query": "sagsstyring skadeservice",
+      "normalized": "sagsstyring skadeservice",
+      "suggestedSlug": "sagsstyring-skadeservice",
+      "type": "profession",
+      "status": "queued",
+      "reason": "relevant field-service niche not yet covered"
+    },
+    {
+      "query": "sagsstyring ejendomsservice",
+      "normalized": "sagsstyring ejendomsservice",
+      "suggestedSlug": "sagsstyring-ejendomsservice",
+      "type": "profession",
+      "status": "queued",
+      "reason": "relevant service-business niche not yet covered"
+    },
+    {
+      "query": "apacha alternativ",
+      "normalized": "apacha alternativ",
+      "suggestedSlug": "apacha-alternativ",
+      "type": "comparison",
+      "status": "queued",
+      "reason": "comparison intent worth covering"
+    },
+    {
+      "query": "sagsstyring skadedyrsbekæmpelse",
+      "normalized": "sagsstyring skadedyrsbekæmpelse",
+      "suggestedSlug": "sagsstyring-skadedyrsbekaempelse",
+      "type": "profession",
+      "status": "queued",
+      "reason": "no existing synonym match"
+    }
+  ]
+}
