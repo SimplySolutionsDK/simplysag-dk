@@ -35,6 +35,8 @@ SimplySag konkurrerer med Minuba, Apacha og Orderstyring. SimplySag fokuserer p�
 - /sagsstyring-haandvaerker/ — guide til hvad små håndværkerfirmaer typisk har brug for i et sagsstyringssystem
 - /minuba-alternativ/ — sammenligningsside for virksomheder der leder efter et alternativ til Minuba
 - /ordrestyring-alternativ/ — sammenligningsside for virksomheder der leder efter et alternativ til Ordrestyring
+- /brancher/ — oversigt over branchesider til håndværk og service
+- Branchesider live for bl.a. murere, tømrere, VVS, malere, elektrikere, anlægsgartnere, kloakmestre, rengøringsfirmaer, blikkenslagere, gulvlæggere, vinduespudsere og nedrivningsfirmaer
 
 ## Leverandør
 - **Firma**: Simply Solutions
