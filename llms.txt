@@ -29,7 +29,12 @@ Små danske håndværkervirksomheder 2-10 ansatte: murere, malere, tømrere, VVS
 - Ingen opstartsgebyr, ingen binding
 
 ## Konkurrenter og sammenligning
-SimplySag konkurrerer med Minuba, Apacha og Orderstyring. SimplySag er billigere end alle tre og fokuserer på enkelhed frem for funktioner.
+SimplySag konkurrerer med Minuba, Apacha og Orderstyring. SimplySag fokuserer på enkelhed, hurtig opstart og små håndværkerfirmaer.
+
+## SEO landingssider
+- /sagsstyring-haandvaerker/ — guide til hvad små håndværkerfirmaer typisk har brug for i et sagsstyringssystem
+- /minuba-alternativ/ — sammenligningsside for virksomheder der leder efter et alternativ til Minuba
+- /ordrestyring-alternativ/ — sammenligningsside for virksomheder der leder efter et alternativ til Ordrestyring
 
 ## Leverandør
 - **Firma**: Simply Solutions
