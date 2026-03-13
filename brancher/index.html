@@ -8,8 +8,73 @@
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://simplysag.dk/brancher/">
   <link rel="stylesheet" href="/tailwind.min.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #f8fafc; color: #1e293b; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .glass-card {
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: 0 4px 24px rgba(30,64,175,0.08), 0 1px 4px rgba(30,64,175,0.06);
+    }
+    .btn-cta {
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(249,115,22,0.35); }
+    .nav-blur {
+      background: rgba(248,250,252,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(30,64,175,0.08);
+    }
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #eff6ff;
+      border: 1px solid #dbeafe;
+      border-radius: 9999px;
+      padding: 0.5rem 0.85rem;
+      font-size: 0.8rem;
+      color: #334155;
+      font-weight: 600;
+    }
+  </style>
+
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
+
+<header class="nav-blur sticky top-0 z-50 mb-8">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 group" aria-label="SimplySag forside">
+      <div class="w-8 h-8 rounded-lg bg-blue-700 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <rect x="3" y="1" width="12" height="15" rx="2" fill="white" fill-opacity="0.9"/>
+          <rect x="6" y="0" width="6" height="3" rx="1.5" fill="#f97316"/>
+          <line x1="5.5" y1="6.5" x2="12.5" y2="6.5" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="5.5" y1="9" x2="12.5" y2="9" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="5.5" y1="11.5" x2="9.5" y2="11.5" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="text-xl font-bold text-blue-700 tracking-tight">Simply<span class="text-orange-500">Sag</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="/#funktioner" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Funktioner</a>
+      <a href="/brancher/" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Brancher</a>
+      <a href="/#pris" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Pris</a>
+      <a href="https://simplysag-app.web.app" class="btn-cta text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-md">Prøv gratis →</a>
+    </div>
+  </nav>
+</header>
+
+    <div class="flex flex-wrap gap-3 mb-10">
+      <div class="trust-pill"><span class="text-green-500">✓</span> 30 dage gratis</div>
+      <div class="trust-pill"><span class="text-green-500">✓</span> Ingen binding</div>
+      <div class="trust-pill"><span class="text-green-500">✓</span> Dansk support</div>
+    </div>
+
   <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
     <a href="/" class="inline-flex items-center text-sm font-medium text-blue-700 hover:underline mb-8">← Tilbage til forsiden</a>
     <header class="mb-12">
@@ -18,55 +83,91 @@
       <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">SimplySag er ikke kun relevant for fire fag. Her er en voksende samling af branchesider til både klassiske håndværk og servicevirksomheder, der arbejder ude hos kunderne.</p>
     </header>
     <section class="grid md:grid-cols-2 gap-6">
-      <a href="/sagsstyring-murer/" class="block bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+      <a href="/sagsstyring-murer/" class="block glass-card rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Sagsstyring til murere</h2>
         <p class="text-sm text-slate-600">Specifik landingsside målrettet murerfirmaer.</p>
       </a>
-      <a href="/sagsstyring-toemrer/" class="block bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+      <a href="/sagsstyring-toemrer/" class="block glass-card rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Sagsstyring til tømrere</h2>
         <p class="text-sm text-slate-600">Specifik landingsside målrettet tømrerfirmaer.</p>
       </a>
-      <a href="/sagsstyring-vvs/" class="block bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+      <a href="/sagsstyring-vvs/" class="block glass-card rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Sagsstyring til VVS-firmaer</h2>
         <p class="text-sm text-slate-600">Specifik landingsside målrettet VVS-firmaer.</p>
       </a>
-      <a href="/sagsstyring-maler/" class="block bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+      <a href="/sagsstyring-maler/" class="block glass-card rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Sagsstyring til malere</h2>
         <p class="text-sm text-slate-600">Specifik landingsside målrettet malerfirmaer.</p>
       </a>
-      <a href="/sagsstyring-elektriker/" class="block bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+      <a href="/sagsstyring-elektriker/" class="block glass-card rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Sagsstyring til elektrikere</h2>
         <p class="text-sm text-slate-600">Specifik landingsside målrettet el-firmaer.</p>
       </a>
-      <a href="/sagsstyring-anlaegsgartner/" class="block bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+      <a href="/sagsstyring-anlaegsgartner/" class="block glass-card rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Sagsstyring til anlægsgartnere</h2>
         <p class="text-sm text-slate-600">Specifik landingsside målrettet anlægsgartnerfirmaer.</p>
       </a>
-      <a href="/sagsstyring-kloakmester/" class="block bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+      <a href="/sagsstyring-kloakmester/" class="block glass-card rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Sagsstyring til kloakmestre</h2>
         <p class="text-sm text-slate-600">Specifik landingsside målrettet kloakfirmaer.</p>
       </a>
-      <a href="/sagsstyring-rengoering/" class="block bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+      <a href="/sagsstyring-rengoering/" class="block glass-card rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Sagsstyring til rengøringsfirmaer</h2>
         <p class="text-sm text-slate-600">Specifik landingsside målrettet rengøringsfirmaer.</p>
       </a>
-      <a href="/sagsstyring-blikkenslager/" class="block bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+      <a href="/sagsstyring-blikkenslager/" class="block glass-card rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Sagsstyring til blikkenslagere</h2>
         <p class="text-sm text-slate-600">Specifik landingsside målrettet blik- og tagfirmaer.</p>
       </a>
-      <a href="/sagsstyring-gulvlaegger/" class="block bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+      <a href="/sagsstyring-gulvlaegger/" class="block glass-card rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Sagsstyring til gulvlæggere</h2>
         <p class="text-sm text-slate-600">Specifik landingsside målrettet gulvfirmaer.</p>
       </a>
-      <a href="/sagsstyring-vinduespudser/" class="block bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+      <a href="/sagsstyring-vinduespudser/" class="block glass-card rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Sagsstyring til vinduespudsere</h2>
         <p class="text-sm text-slate-600">Specifik landingsside målrettet vinduespudserfirmaer.</p>
       </a>
-      <a href="/sagsstyring-nedrivning/" class="block bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+      <a href="/sagsstyring-nedrivning/" class="block glass-card rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Sagsstyring til nedrivningsfirmaer</h2>
         <p class="text-sm text-slate-600">Specifik landingsside målrettet nedrivningsfirmaer.</p>
       </a>
     </section>
   </main>
+
+<footer class="bg-slate-900 text-slate-400 py-14 mt-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-blue-700 flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <rect x="3" y="1" width="12" height="15" rx="2" fill="white" fill-opacity="0.9"/>
+              <rect x="6" y="0" width="6" height="3" rx="1.5" fill="#f97316"/>
+            </svg>
+          </div>
+          <span class="text-white text-xl font-bold">Simply<span class="text-orange-500">Sag</span></span>
+        </div>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-xs">Let og billig sagsstyring for danske håndværkere. Oprettet af Simply Solutions.</p>
+      </div>
+      <div>
+        <h3 class="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Sider</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/sagsstyring-haandvaerker/" class="hover:text-white transition-colors">Sagsstyring</a></li>
+          <li><a href="/brancher/" class="hover:text-white transition-colors">Brancher</a></li>
+          <li><a href="/minuba-vs-simplysag/" class="hover:text-white transition-colors">Sammenligninger</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Kontakt</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="mailto:support@simso.dk" class="hover:text-white transition-colors">support@simso.dk</a></li>
+          <li><a href="https://simplysolutions.dk" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">simplysolutions.dk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 pt-6 text-xs text-slate-600">© 2026 SimplySag · En del af Simply Solutions</div>
+  </div>
+</footer>
+
 </body>
 </html>
