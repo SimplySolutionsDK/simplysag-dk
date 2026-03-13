@@ -355,9 +355,10 @@
 
     /* === Nav blur === */
     .nav-blur {
-      background: rgba(248,250,252,0.92);
+      background: rgba(248,250,252,0.94);
       backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(30,64,175,0.08);
+      border-bottom: 1px solid rgba(30,64,175,0.10);
+      box-shadow: 0 10px 30px rgba(15,23,42,0.06);
     }
 
     /* === Pricing card highlight === */
@@ -708,7 +709,7 @@
             <circle cx="60" cy="60" r="2" fill="white"/>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Timeseddel</h3>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Timeseddel</h3>
         <p class="text-slate-500 leading-relaxed text-sm">Registrér timer direkte fra telefonen. Se hvem der har arbejdet hvad, og eksportér nemt til faktura.</p>
         <div class="mt-6 pt-6 border-t border-slate-100 w-full">
           <ul class="space-y-2 text-left text-sm text-slate-600">
@@ -824,7 +825,7 @@
             </defs>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Sagsstyring</h3>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Sagsstyring</h3>
         <p class="text-slate-500 leading-relaxed text-sm">Hold styr på alle sager ét sted. Fra oprettelse til afslutning — med tilknyttede timer, materialer og billeder.</p>
         <div class="mt-6 pt-6 border-t border-slate-100 w-full">
           <ul class="space-y-2 text-left text-sm text-slate-600">
@@ -928,7 +929,7 @@
             </defs>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Billeddokumentation</h3>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Billeddokumentation</h3>
         <p class="text-slate-500 leading-relaxed text-sm">Tag billeder direkte i appen og tilknyt dem til sagen. Perfekt til dokumentation før, under og efter.</p>
         <div class="mt-6 pt-6 border-t border-slate-100 w-full">
           <ul class="space-y-2 text-left text-sm text-slate-600">
@@ -962,7 +963,7 @@
             </defs>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Kundedatabase</h3>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Kundedatabase</h3>
         <p class="text-slate-500 leading-relaxed text-sm">Hold styr på alle dine kunder ét sted. Tilknyt sager til kunder og find altid historikken.</p>
         <div class="mt-6 pt-6 border-t border-slate-100 w-full">
           <ul class="space-y-2 text-left text-sm text-slate-600">
@@ -1003,7 +1004,7 @@
             </defs>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Kalendervisning</h3>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Kalendervisning</h3>
         <p class="text-slate-500 leading-relaxed text-sm">Se alle sager i en kalender. Planlæg arbejdet visuelt og synkroniser direkte med Google Kalender.</p>
         <div class="mt-6 pt-6 border-t border-slate-100 w-full">
           <ul class="space-y-2 text-left text-sm text-slate-600">
@@ -1037,7 +1038,7 @@
             </defs>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Bruger- og rollestyring</h3>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Bruger- og rollestyring</h3>
         <p class="text-slate-500 leading-relaxed text-sm">Invitér dit team med en simpel kode. Tildel roller og styr hvem der kan hvad.</p>
         <div class="mt-6 pt-6 border-t border-slate-100 w-full">
           <ul class="space-y-2 text-left text-sm text-slate-600">
@@ -1192,7 +1193,7 @@
           </div>
           <div class="bg-primary text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center mb-3 shadow-md">1</div>
           <h3 class="text-lg font-bold text-text-main mb-2">Opret din virksomhed</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">På 30 sekunder er du klar. Udfyld navn og CVR — resten klarer vi.</p>
+          <p class="text-slate-500 text-sm md:text-[15px] leading-7">På 30 sekunder er du klar. Udfyld navn og CVR — resten klarer vi.</p>
         </div>
 
         <!-- Step 2 -->
@@ -1210,7 +1211,7 @@
           </div>
           <div class="bg-primary text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center mb-3 shadow-md">2</div>
           <h3 class="text-lg font-bold text-text-main mb-2">Invitér dine medarbejdere</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Del en simpel kode med dit team. De er klar på 60 sekunder.</p>
+          <p class="text-slate-500 text-sm md:text-[15px] leading-7">Del en simpel kode med dit team. De er klar på 60 sekunder.</p>
         </div>
 
         <!-- Step 3 -->
@@ -1228,7 +1229,7 @@
           </div>
           <div class="bg-primary text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center mb-3 shadow-md">3</div>
           <h3 class="text-lg font-bold text-text-main mb-2">Styr sagerne fra telefonen</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Opret sager, registrér timer og tag billeder — alt fra din smartphone.</p>
+          <p class="text-slate-500 text-sm md:text-[15px] leading-7">Opret sager, registrér timer og tag billeder — alt fra din smartphone.</p>
         </div>
 
       </div>
@@ -1549,106 +1550,106 @@
       <p class="text-lg text-slate-500 max-w-2xl mx-auto">Hvis du undersøger markedet, kan du starte her. De her sider er skrevet til små danske håndværkerfirmaer, der vil finde det rigtige system uden at drukne i salgssnak.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-      <a href="/sagsstyring-haandvaerker/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.05s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Guide</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Sagsstyring til håndværkere</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">En kort guide til hvad små håndværkerfirmaer faktisk har brug for i et sagsstyringssystem.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+      <a href="/sagsstyring-haandvaerker/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.05s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">Guide</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Sagsstyring til håndværkere</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">En kort guide til hvad små håndværkerfirmaer faktisk har brug for i et sagsstyringssystem.</p>
       </a>
 
-      <a href="/minuba-alternativ/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.1s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Sammenligning</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Minuba alternativ</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til firmaer der gerne vil have noget mere enkelt og hurtigere at tage i brug.</p>
+      <a href="/minuba-alternativ/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.1s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">Sammenligning</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Minuba alternativ</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til firmaer der gerne vil have noget mere enkelt og hurtigere at tage i brug.</p>
       </a>
 
-      <a href="/ordrestyring-alternativ/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.15s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Sammenligning</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Ordrestyring alternativ</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til mindre virksomheder der vil have mindre friktion i hverdagen og lavere kompleksitet.</p>
-      </a>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-      <a href="/apacha-alternativ/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.18s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Sammenligning</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Apacha alternativ</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til mindre håndværkerfirmaer der vil have et lettere setup og hurtigere opstart.</p>
-      </a>
-
-      <a href="/minuba-vs-simplysag/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.21s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">VS-sammenligning</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Minuba vs SimplySag</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til dem der vil sammenligne enkelhed, pris og opstartstid mere direkte.</p>
-      </a>
-
-      <a href="/ordrestyring-vs-simplysag/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.24s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">VS-sammenligning</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Ordrestyring vs SimplySag</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til firmaer der vil vælge mellem bredere system og mere enkel hverdag.</p>
+      <a href="/ordrestyring-alternativ/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.15s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">Sammenligning</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Ordrestyring alternativ</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til mindre virksomheder der vil have mindre friktion i hverdagen og lavere kompleksitet.</p>
       </a>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-      <a href="/apacha-vs-simplysag/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.27s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">VS-sammenligning</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Apacha vs SimplySag</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til firmaer der vil sammenligne Apacha og SimplySag mere direkte på opstart, pris og kompleksitet.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+      <a href="/apacha-alternativ/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.18s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">Sammenligning</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Apacha alternativ</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til mindre håndværkerfirmaer der vil have et lettere setup og hurtigere opstart.</p>
       </a>
 
-      <a href="/billig-sagsstyring-haandvaerker/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.30s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Kommerciel side</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Billig sagsstyring til håndværkere</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til prisfølsomme søgninger hvor fokus er lav månedlig pris uden at miste styr på sager og timer.</p>
-      </a>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-      <a href="/ordrestyring-haandvaerker/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.33s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Kommerciel side</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Ordrestyring til håndværkere</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til søgninger hvor fokus er ordrestyring, men behovet stadig er enkelt og mobilt.</p>
+      <a href="/minuba-vs-simplysag/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.21s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">VS-sammenligning</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Minuba vs SimplySag</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til dem der vil sammenligne enkelhed, pris og opstartstid mere direkte.</p>
       </a>
 
-      <a href="/timeregistrering-haandvaerker/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.36s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Kommerciel side</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Timeregistrering til håndværkere</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til virksomheder der vil gøre timeregistrering lettere at få brugt i praksis.</p>
-      </a>
-
-      <a href="/bedste-sagsstyring-haandvaerker/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.39s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Kommerciel guide</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Bedste sagsstyring til håndværkere</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til dem der er tidligt i research og vil forstå hvad de egentlig bør kigge efter.</p>
+      <a href="/ordrestyring-vs-simplysag/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.24s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">VS-sammenligning</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Ordrestyring vs SimplySag</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til firmaer der vil vælge mellem bredere system og mere enkel hverdag.</p>
       </a>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-      <a href="/timeseddel-app-haandvaerker/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.42s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Kommerciel side</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Timeseddel app til håndværkere</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til søgninger hvor brugeren leder efter en konkret app til timer i marken.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+      <a href="/apacha-vs-simplysag/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.27s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">VS-sammenligning</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Apacha vs SimplySag</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til firmaer der vil sammenligne Apacha og SimplySag mere direkte på opstart, pris og kompleksitet.</p>
       </a>
 
-      <a href="/app-til-haandvaerker/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.45s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Kommerciel side</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">App til håndværkere</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til bredere mobil-intent hvor folk leder efter et digitalt værktøj til hverdagen.</p>
-      </a>
-
-      <a href="/materialeregistrering-haandvaerker/" class="fade-up glass-card rounded-3xl p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style="animation-delay:0.48s">
-        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Kommerciel side</div>
-        <h3 class="text-xl font-bold text-text-main mb-3">Materialeregistrering til håndværkere</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Til søgninger hvor fokus er bedre registrering af forbrug direkte på sagen.</p>
+      <a href="/billig-sagsstyring-haandvaerker/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.30s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">Kommerciel side</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Billig sagsstyring til håndværkere</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til prisfølsomme søgninger hvor fokus er lav månedlig pris uden at miste styr på sager og timer.</p>
       </a>
     </div>
 
-    <div class="fade-up bg-slate-50 border border-slate-200 rounded-3xl p-7" style="animation-delay:0.2s">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+      <a href="/ordrestyring-haandvaerker/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.33s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">Kommerciel side</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Ordrestyring til håndværkere</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til søgninger hvor fokus er ordrestyring, men behovet stadig er enkelt og mobilt.</p>
+      </a>
+
+      <a href="/timeregistrering-haandvaerker/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.36s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">Kommerciel side</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Timeregistrering til håndværkere</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til virksomheder der vil gøre timeregistrering lettere at få brugt i praksis.</p>
+      </a>
+
+      <a href="/bedste-sagsstyring-haandvaerker/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.39s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">Kommerciel guide</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Bedste sagsstyring til håndværkere</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til dem der er tidligt i research og vil forstå hvad de egentlig bør kigge efter.</p>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+      <a href="/timeseddel-app-haandvaerker/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.42s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">Kommerciel side</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Timeseddel app til håndværkere</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til søgninger hvor brugeren leder efter en konkret app til timer i marken.</p>
+      </a>
+
+      <a href="/app-til-haandvaerker/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.45s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">Kommerciel side</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">App til håndværkere</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til bredere mobil-intent hvor folk leder efter et digitalt værktøj til hverdagen.</p>
+      </a>
+
+      <a href="/materialeregistrering-haandvaerker/" class="fade-up glass-card rounded-[2rem] p-9 md:p-10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 min-h-[220px] flex flex-col justify-between" style="animation-delay:0.48s">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">Kommerciel side</div>
+        <h3 class="text-xl md:text-2xl font-bold text-text-main mb-4 leading-snug">Materialeregistrering til håndværkere</h3>
+        <p class="text-slate-500 text-sm md:text-[15px] leading-7">Til søgninger hvor fokus er bedre registrering af forbrug direkte på sagen.</p>
+      </a>
+    </div>
+
+    <div class="fade-up glass-card rounded-[2rem] p-9 md:p-10" style="animation-delay:0.2s">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-2">Brancher</div>
           <h3 class="text-2xl font-bold text-text-main mb-2">Sider til flere fag og servicevirksomheder</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Vi har også lavet specifikke sider til blandt andet murere, tømrere, VVS, kloak, rengøring, blikkenslager, gulvlægger, vinduespudsning og nedrivning.</p>
+          <p class="text-slate-500 text-sm md:text-[15px] leading-7">Vi har også lavet specifikke sider til blandt andet murere, tømrere, VVS, kloak, rengøring, blikkenslager, gulvlægger, vinduespudsning og nedrivning.</p>
         </div>
         <div>
           <a href="/brancher/" class="inline-flex items-center justify-center rounded-xl bg-primary text-white font-semibold px-6 py-3 hover:bg-blue-700 transition-colors">Se alle brancher</a>
