@@ -6,6 +6,7 @@ This folder is the lightweight semi-automatic SEO system.
 
 - `profession-mapping.json` — known professions, synonyms, slugs and page input data
 - `opportunity-queue.json` — search intents not yet covered, plus comparison opportunities
+- `BACKLOG.md` — prioritized next steps so good ideas do not get lost
 - `../scripts/generate_seo_page.py` — queue and publish helper
 
 ## Best-practice workflow
