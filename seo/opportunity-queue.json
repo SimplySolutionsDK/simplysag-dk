@@ -7,7 +7,7 @@
       "suggestedSlug": "sagsstyring-skadeservice",
       "type": "profession",
       "status": "queued",
-      "reason": "relevant field-service niche not yet covered"
+      "reason": "no existing synonym match"
     },
     {
       "query": "sagsstyring ejendomsservice",
@@ -15,7 +15,7 @@
       "suggestedSlug": "sagsstyring-ejendomsservice",
       "type": "profession",
       "status": "queued",
-      "reason": "relevant service-business niche not yet covered"
+      "reason": "no existing synonym match"
     },
     {
       "query": "apacha alternativ",
@@ -23,7 +23,7 @@
       "suggestedSlug": "apacha-alternativ",
       "type": "comparison",
       "status": "queued",
-      "reason": "comparison intent worth covering"
+      "reason": "comparison intent not yet covered"
     },
     {
       "query": "sagsstyring skadedyrsbekæmpelse",
@@ -32,6 +32,239 @@
       "type": "profession",
       "status": "queued",
       "reason": "no existing synonym match"
+    },
+    {
+      "query": "app til sagsstyring",
+      "normalized": "app til sagsstyring",
+      "suggestedSlug": null,
+      "type": "generic",
+      "status": "ignored",
+      "reason": "generic query not suitable for a dedicated landing page"
+    },
+    {
+      "query": "arbejdsseddel håndværker",
+      "normalized": "arbejdsseddel håndværker",
+      "suggestedSlug": "sagsstyring-haandvaerker",
+      "type": "topic",
+      "status": "mapped-existing",
+      "reason": "maps to existing core topic page until dedicated page exists"
+    },
+    {
+      "query": "digital sagsstyring",
+      "normalized": "digital sagsstyring",
+      "suggestedSlug": null,
+      "type": "generic",
+      "status": "ignored",
+      "reason": "generic query not suitable for a dedicated landing page"
+    },
+    {
+      "query": "elektronisk sagsstyring",
+      "normalized": "elektronisk sagsstyring",
+      "suggestedSlug": null,
+      "type": "generic",
+      "status": "ignored",
+      "reason": "generic query not suitable for a dedicated landing page"
+    },
+    {
+      "query": "håndværker sagsstyring",
+      "normalized": "håndværker sagsstyring",
+      "suggestedSlug": "sagsstyring-haandvaerker",
+      "type": "topic",
+      "status": "mapped-existing",
+      "reason": "maps to existing core topic page"
+    },
+    {
+      "query": "håndværker tidsregistrering",
+      "normalized": "håndværker tidsregistrering",
+      "suggestedSlug": "sagsstyring-haandvaerker",
+      "type": "topic",
+      "status": "mapped-existing",
+      "reason": "maps to existing core topic page until dedicated page exists"
+    },
+    {
+      "query": "håndværker timeregistrering",
+      "normalized": "håndværker timeregistrering",
+      "suggestedSlug": "sagsstyring-haandvaerker",
+      "type": "topic",
+      "status": "mapped-existing",
+      "reason": "maps to existing core topic page until dedicated page exists"
+    },
+    {
+      "query": "håndværkere sagsstyring",
+      "normalized": "håndværkere sagsstyring",
+      "suggestedSlug": "sagsstyring-haandvaerker",
+      "type": "topic",
+      "status": "mapped-existing",
+      "reason": "maps to existing core topic page"
+    },
+    {
+      "query": "håndværksmester sagsstyring",
+      "normalized": "håndværksmester sagsstyring",
+      "suggestedSlug": "sagsstyring-haandvaerksmester",
+      "type": "profession",
+      "status": "queued",
+      "reason": "no existing synonym match"
+    },
+    {
+      "query": "online sagsstyring",
+      "normalized": "online sagsstyring",
+      "suggestedSlug": null,
+      "type": "generic",
+      "status": "ignored",
+      "reason": "generic query not suitable for a dedicated landing page"
+    },
+    {
+      "query": "sags og ordrestyring til håndværkere",
+      "normalized": "sags og ordrestyring til håndværkere",
+      "suggestedSlug": "sagsstyring-sags-og-ordrestyring-haandvaerkere",
+      "type": "profession",
+      "status": "queued",
+      "reason": "no existing synonym match"
+    },
+    {
+      "query": "sagsstyring",
+      "normalized": "sagsstyring",
+      "suggestedSlug": null,
+      "type": "generic",
+      "status": "ignored",
+      "reason": "generic query not suitable for a dedicated landing page"
+    },
+    {
+      "query": "sagsstyring app",
+      "normalized": "sagsstyring app",
+      "suggestedSlug": null,
+      "type": "generic",
+      "status": "ignored",
+      "reason": "generic query not suitable for a dedicated landing page"
+    },
+    {
+      "query": "sagsstyring gratis",
+      "normalized": "sagsstyring gratis",
+      "suggestedSlug": null,
+      "type": "generic",
+      "status": "ignored",
+      "reason": "generic query not suitable for a dedicated landing page"
+    },
+    {
+      "query": "sagsstyring håndværker",
+      "normalized": "sagsstyring håndværker",
+      "suggestedSlug": "sagsstyring-haandvaerker",
+      "type": "topic",
+      "status": "mapped-existing",
+      "reason": "maps to existing core topic page"
+    },
+    {
+      "query": "sagsstyring håndværkere",
+      "normalized": "sagsstyring håndværkere",
+      "suggestedSlug": "sagsstyring-haandvaerker",
+      "type": "topic",
+      "status": "mapped-existing",
+      "reason": "maps to existing core topic page"
+    },
+    {
+      "query": "sagsstyring system",
+      "normalized": "sagsstyring system",
+      "suggestedSlug": null,
+      "type": "generic",
+      "status": "ignored",
+      "reason": "generic query not suitable for a dedicated landing page"
+    },
+    {
+      "query": "sagsstyringsprogram",
+      "normalized": "sagsstyringsprogram",
+      "suggestedSlug": null,
+      "type": "generic",
+      "status": "ignored",
+      "reason": "generic query not suitable for a dedicated landing page"
+    },
+    {
+      "query": "sagsstyringssystem håndværker",
+      "normalized": "sagsstyringssystem håndværker",
+      "suggestedSlug": "sagsstyring-ssystem-haandvaerker",
+      "type": "profession",
+      "status": "queued",
+      "reason": "no existing synonym match"
+    },
+    {
+      "query": "simpel tidsregistrering",
+      "normalized": "simpel tidsregistrering",
+      "suggestedSlug": null,
+      "type": "generic",
+      "status": "ignored",
+      "reason": "generic query not suitable for a dedicated landing page"
+    },
+    {
+      "query": "tidsregistrering håndværker",
+      "normalized": "tidsregistrering håndværker",
+      "suggestedSlug": "sagsstyring-haandvaerker",
+      "type": "topic",
+      "status": "mapped-existing",
+      "reason": "maps to existing core topic page until dedicated page exists"
+    },
+    {
+      "query": "time sagsstyring",
+      "normalized": "time sagsstyring",
+      "suggestedSlug": null,
+      "type": "generic",
+      "status": "ignored",
+      "reason": "generic query not suitable for a dedicated landing page"
+    },
+    {
+      "query": "time sagsstyring app",
+      "normalized": "time sagsstyring app",
+      "suggestedSlug": null,
+      "type": "generic",
+      "status": "ignored",
+      "reason": "generic query not suitable for a dedicated landing page"
+    },
+    {
+      "query": "time sagsstyring håndværker",
+      "normalized": "time sagsstyring håndværker",
+      "suggestedSlug": "sagsstyring-haandvaerker",
+      "type": "topic",
+      "status": "mapped-existing",
+      "reason": "maps to existing core topic page"
+    },
+    {
+      "query": "time- og sagsstyring",
+      "normalized": "time- og sagsstyring",
+      "suggestedSlug": "sagsstyring-time-og",
+      "type": "profession",
+      "status": "queued",
+      "reason": "no existing synonym match"
+    },
+    {
+      "query": "time- og sagsstyring håndværker",
+      "normalized": "time- og sagsstyring håndværker",
+      "suggestedSlug": "sagsstyring-haandvaerker",
+      "type": "topic",
+      "status": "mapped-existing",
+      "reason": "maps to existing core topic page"
+    },
+    {
+      "query": "timeregistrering håndværker",
+      "normalized": "timeregistrering håndværker",
+      "suggestedSlug": "sagsstyring-haandvaerker",
+      "type": "topic",
+      "status": "mapped-existing",
+      "reason": "maps to existing core topic page until dedicated page exists"
+    },
+    {
+      "query": "timeseddel for håndværkere",
+      "normalized": "timeseddel for håndværkere",
+      "suggestedSlug": "sagsstyring-timeseddel-haandvaerkere",
+      "type": "profession",
+      "status": "queued",
+      "reason": "no existing synonym match"
     }
-  ]
+  ],
+  "lastGscImport": {
+    "siteUrl": "sc-domain:simplysag.dk",
+    "startDate": "2025-12-13",
+    "endDate": "2026-03-12",
+    "rowLimit": 20,
+    "minClicks": 0.0,
+    "minImpressions": 1.0,
+    "processedCount": 20
+  }
 }

@@ -8,6 +8,7 @@ This folder is the lightweight semi-automatic SEO system.
 - `opportunity-queue.json` — search intents not yet covered, plus comparison opportunities
 - `BACKLOG.md` — prioritized next steps so good ideas do not get lost
 - `../scripts/generate_seo_page.py` — queue and publish helper
+- `../scripts/import_gsc_queries.py` — imports real Google Search Console queries into the opportunity queue
 
 ## Best-practice workflow
 
@@ -19,6 +20,31 @@ This folder is the lightweight semi-automatic SEO system.
 3. If it does not map, review the suggested slug in `seo/opportunity-queue.json`.
 4. Publish only when the profession/service is commercially relevant and the page will be useful.
 5. After publishing, improve internal links where relevant — don't rely on sitemap alone.
+
+## Import real Search Console queries
+
+List available properties:
+
+```bash
+python3 scripts/import_gsc_queries.py --list-sites
+```
+
+Import queries from the SimplySag property into the queue:
+
+```bash
+python3 scripts/import_gsc_queries.py \
+  --site-url sc-domain:simplysag.dk \
+  --days 90 \
+  --row-limit 250 \
+  --min-impressions 3
+```
+
+What this does:
+- pulls real GSC queries via the existing service-account key
+- runs each query through the queue classifier
+- maps known intents to existing pages
+- ignores broad junk like purely generic modifier phrases
+- queues only uncovered opportunities worth reviewing
 
 ## Publish a new profession page
 

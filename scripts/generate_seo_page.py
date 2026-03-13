@@ -13,6 +13,45 @@ SITEMAP_PATH = ROOT / 'sitemap.xml'
 INDEX_PATH = ROOT / 'index.html'
 LLMS_PATH = ROOT / 'llms.txt'
 
+EXISTING_TOPIC_PATTERNS = [
+    {
+        'patterns': ['sagsstyring håndværker', 'sagsstyring håndværkere', 'håndværker sagsstyring', 'håndværkere sagsstyring'],
+        'slug': 'sagsstyring-haandvaerker',
+        'title': 'Sagsstyring til håndværkere',
+        'type': 'topic',
+        'reason': 'maps to existing core topic page',
+    },
+    {
+        'patterns': ['arbejdsseddel håndværker', 'tidsregistrering håndværker', 'timeregistrering håndværker', 'håndværker tidsregistrering', 'håndværker timeregistrering'],
+        'slug': 'sagsstyring-haandvaerker',
+        'title': 'Sagsstyring til håndværkere',
+        'type': 'topic',
+        'reason': 'maps to existing core topic page until dedicated page exists',
+    },
+    {
+        'patterns': ['minuba alternativ'],
+        'slug': 'minuba-alternativ',
+        'title': 'SimplySag som Minuba alternativ',
+        'type': 'comparison',
+        'reason': 'maps to existing comparison page',
+    },
+    {
+        'patterns': ['ordrestyring alternativ'],
+        'slug': 'ordrestyring-alternativ',
+        'title': 'SimplySag som Ordrestyring alternativ',
+        'type': 'comparison',
+        'reason': 'maps to existing comparison page',
+    },
+]
+
+COMPARISON_TERMS = ['alternativ', 'vs', 'versus', 'sammenligning']
+IGNORED_GENERIC_QUERIES = {
+    'app til sagsstyring', 'digital sagsstyring', 'elektronisk sagsstyring',
+    'online sagsstyring', 'sagsstyring', 'sagsstyring app', 'sagsstyring system',
+    'sagsstyringsprogram', 'sagsstyring gratis', 'simpel tidsregistrering',
+    'time sagsstyring', 'time sagsstyring app'
+}
+
 
 def load_json(path: Path):
     return json.loads(path.read_text())
@@ -42,6 +81,30 @@ def slugify(text: str) -> str:
 
 def infer_from_query(query: str, mapping: dict):
     q = normalize(query)
+
+    if q in IGNORED_GENERIC_QUERIES:
+        return {
+            'matched': False,
+            'existing': False,
+            'slug': None,
+            'title': None,
+            'type': 'generic',
+            'status': 'ignored',
+            'reason': 'generic query not suitable for a dedicated landing page'
+        }
+
+    for topic in EXISTING_TOPIC_PATTERNS:
+        if any(pattern in q for pattern in topic['patterns']):
+            return {
+                'matched': True,
+                'existing': True,
+                'slug': topic['slug'],
+                'title': topic['title'],
+                'type': topic['type'],
+                'status': 'mapped-existing',
+                'reason': topic['reason']
+            }
+
     for profession in mapping['professions']:
         for synonym in profession.get('synonyms', []):
             if normalize(synonym) in q:
@@ -50,18 +113,59 @@ def infer_from_query(query: str, mapping: dict):
                     'existing': True,
                     'slug': profession['slug'],
                     'title': profession['title'],
+                    'type': 'profession',
+                    'status': 'mapped-existing',
                     'reason': f"matched synonym: {synonym}"
                 }
+
     cleaned = q
     for phrase in ['sagsstyring', 'app til', 'system til', 'software til', 'for', 'til']:
         cleaned = cleaned.replace(phrase, ' ')
     cleaned = normalize(cleaned)
+
+    if any(term in q for term in COMPARISON_TERMS):
+        return {
+            'matched': True,
+            'existing': False,
+            'slug': slugify(q),
+            'title': q.title(),
+            'type': 'comparison',
+            'status': 'queued',
+            'reason': 'comparison intent not yet covered'
+        }
+
+    if not cleaned or len(cleaned) < 4:
+        return {
+            'matched': False,
+            'existing': False,
+            'slug': None,
+            'title': None,
+            'type': 'generic',
+            'status': 'ignored',
+            'reason': 'query too broad or too short to justify dedicated page'
+        }
+
+    blocked_tokens = {'online', 'digital', 'elektronisk', 'gratis', 'app', 'system', 'program', 'simpel', 'time'}
+    cleaned_tokens = set(cleaned.split())
+    if cleaned_tokens and cleaned_tokens.issubset(blocked_tokens):
+        return {
+            'matched': False,
+            'existing': False,
+            'slug': None,
+            'title': None,
+            'type': 'generic',
+            'status': 'ignored',
+            'reason': 'generic modifier query not suitable for dedicated page'
+        }
+
     suggested_slug = f"sagsstyring-{slugify(cleaned)}" if cleaned else None
     return {
         'matched': bool(cleaned),
         'existing': False,
         'slug': suggested_slug,
         'title': f"Sagsstyring til {cleaned}" if cleaned else None,
+        'type': 'profession',
+        'status': 'queued',
         'reason': 'no existing synonym match'
     }
 
@@ -80,8 +184,8 @@ def ensure_queue_item(query: str):
         'query': query,
         'normalized': normalized,
         'suggestedSlug': info['slug'],
-        'type': 'profession',
-        'status': 'mapped-existing' if info['existing'] else 'queued',
+        'type': info.get('type', 'profession'),
+        'status': info.get('status', ('mapped-existing' if info['existing'] else 'queued')),
         'reason': info['reason']
     }
     queue['items'].append(item)

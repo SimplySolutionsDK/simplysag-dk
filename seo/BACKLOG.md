@@ -4,8 +4,8 @@ Maintained as the next-step queue for programmatic SEO, comparison pages, and qu
 
 ## High priority
 
-- [ ] **A: Connect Search Console / query ingestion to the SEO workflow**
-  Feed real search queries into `seo/opportunity-queue.json` so we can spot uncovered profession, service, and comparison intent from actual demand instead of guessing.
+- [x] **A: Connect Search Console / query ingestion to the SEO workflow**
+  Real search queries can now be imported into `seo/opportunity-queue.json` via `scripts/import_gsc_queries.py`, using the existing GSC service-account access for `sc-domain:simplysag.dk`.
 
 ## Next up
 
