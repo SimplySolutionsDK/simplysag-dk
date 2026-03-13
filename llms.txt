@@ -5,7 +5,7 @@
 ## Produkt
 - **Navn**: SimplySag
 - **Kategori**: Sagsstyring SaaS til danske håndværkere
-- **Pris**: 199 DKK/måned (inkl. 3 brugere), +49 DKK/md pr. ekstra bruger
+- **Pris**: 199 DKK/måned (inkl. 3 brugere) eller 2.189 DKK/år for basispakken (12 måneder for 11), +49 DKK/md pr. ekstra bruger
 - **Prøveperiode**: 30 dage gratis (kreditkort kræves)
 - **Binding**: Ingen binding, opsig når som helst
 - **URL**: https://simplysag.dk
@@ -23,8 +23,9 @@
 Små danske håndværkervirksomheder 2-10 ansatte: murere, malere, tømrere, VVS-installatører, elektrikere, anlægsgartnere.
 
 ## Priser
-- Basis: 199 DKK/md — inkluderer 3 brugere
-- Ekstra bruger: +49 DKK/md pr. bruger
+- Basis månedlig: 199 DKK/md — inkluderer 3 brugere
+- Basis årlig: 2.189 DKK/år — 12 måneder for prisen af 11
+- Ekstra bruger: +49 DKK/md pr. bruger (også på årsplan)
 - Prøveperiode: 30 dage gratis med kreditkort
 - Ingen opstartsgebyr, ingen binding
 
