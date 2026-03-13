@@ -57,3 +57,9 @@ support@simso.dk
 - /apacha-vs-simplysag/ — direkte sammenligning mellem Apacha og SimplySag for små håndværkerfirmaer
 
 - /billig-sagsstyring-haandvaerker/ — kommerciel side for prisfølsomme håndværkerfirmaer der søger billig sagsstyring
+
+- /ordrestyring-haandvaerker/ — kommerciel side om ordrestyring til små håndværkerfirmaer
+
+- /timeregistrering-haandvaerker/ — kommerciel side om timeregistrering til håndværkere
+
+- /bedste-sagsstyring-haandvaerker/ — kommerciel guide om valg af sagsstyring til små håndværkerfirmaer
